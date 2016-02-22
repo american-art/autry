@@ -16,6 +16,12 @@ else:
     return ""
 ```
 
+#### _ProductionURI_
+From column: _ObjectURI_
+>``` python
+return getValue("ObjectURI")+"/production"
+```
+
 
 ### Semantic Types
 | Column | Property | Class |
@@ -25,6 +31,7 @@ else:
 | _Nationality_ | `rdfs:label` | `E74_Group1`|
 | _NationalityURI_ | `uri` | `E74_Group1`|
 | _ObjectURI_ | `uri` | `E22_Man-Made_Object1`|
+| _ProductionURI_ | `uri` | `E12_Production1`|
 
 
 ### Links
