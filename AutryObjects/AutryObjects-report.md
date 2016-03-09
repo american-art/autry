@@ -1,6 +1,7 @@
 ## AutryObjects_Sheet1
 
 ### PyTransforms
+
 #### _ObjectURI_
 From column: _ObjectID_
 >``` python
@@ -26,18 +27,6 @@ return getValue("ObjectURI")+"/title"
 From column: _Measurements_
 >``` python
 return getValue("ObjectURI")+"/dimensions"
-```
-
-#### _ProductionURI_
-From column: _Dated_
->``` python
-return getValue("ObjectURI")+"/production"
-```
-
-#### _ProductionDateURI_
-From column: _Dated_
->``` python
-return getValue("ProductionURI")+"/date"
 ```
 
 #### _MaterialsURI_
