@@ -1,0 +1,3295 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix km-dev: <http://isi.edu/integration/karma/dev#> .
+
+_:node1atmjgbjax1 a km-dev:R2RMLMapping ;
+	km-dev:sourceName "AutryMakers_new_Sheet1" ;
+	km-dev:modelPublicationTime "1475006180970"^^xsd:long ;
+	km-dev:modelVersion "1.7" ;
+	km-dev:hasInputColumns "[[{\"columnName\":\"Maker\"}],[{\"columnName\":\"ObjectID\"}],[{\"columnName\":\"Dates\"}],[{\"columnName\":\"ULAN_ID\"}],[{\"columnName\":\"Nationality\"}],[{\"columnName\":\"AutryMakerURL\"}]]" ;
+	km-dev:hasOutputColumns "[[{\"columnName\":\"BirthDate\"}],[{\"columnName\":\"Maker\"}],[{\"columnName\":\"DeathDateURI\"}],[{\"columnName\":\"ULAN_ID\"}],[{\"columnName\":\"ObjectURI\"}],[{\"columnName\":\"BirthDateURI\"}],[{\"columnName\":\"Nationality\"}],[{\"columnName\":\"NationalityURI\"}],[{\"columnName\":\"AutryMakerURL\"}],[{\"columnName\":\"ProductionURI\"}],[{\"columnName\":\"DeathDate\"}]]" ;
+	km-dev:hasModelLabel "AutryMakers_new_Sheet1" ;
+	km-dev:hasBaseURI "http://americanartcollaborative.org/autry/" ;
+	km-dev:hasWorksheetHistory """[
+    {
+        \"commandName\": \"SubmitPythonTransformationCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"ObjectID\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"newColumnName\",
+                \"type\": \"other\",
+                \"value\": \"ObjectURI\"
+            },
+            {
+                \"name\": \"transformationCode\",
+                \"type\": \"other\",
+                \"value\": \"return \\\"object/\\\"+getValue(\\\"ObjectID\\\")\"
+            },
+            {
+                \"name\": \"errorDefaultValue\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"isJSONOutput\",
+                \"type\": \"other\",
+                \"value\": \"false\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"ObjectID\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"ObjectURI\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"Transformation\"]
+    },
+    {
+        \"commandName\": \"SubmitPythonTransformationCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"Nationality\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"newColumnName\",
+                \"type\": \"other\",
+                \"value\": \"NationalityURI\"
+            },
+            {
+                \"name\": \"transformationCode\",
+                \"type\": \"other\",
+                \"value\": \"if getValue(\\\"Nationality\\\"):\\n    return \\\"thesauri/nationality/\\\"+getValue(\\\"Nationality\\\").replace(\\\" \\\",\\\"-\\\")\\nelse:\\n    return \\\"\\\"\"
+            },
+            {
+                \"name\": \"errorDefaultValue\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"isJSONOutput\",
+                \"type\": \"other\",
+                \"value\": \"false\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Nationality\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"NationalityURI\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"Transformation\"]
+    },
+    {
+        \"commandName\": \"SetWorksheetPropertiesCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"properties\",
+                \"type\": \"other\",
+                \"value\": {
+                    \"graphLabel\": \"\",
+                    \"hasBaseURI\": true,
+                    \"baseURI\": \"http://americanartcollaborative.org/autry/\",
+                    \"hasPrefix\": false,
+                    \"hasServiceProperties\": false
+                }
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Transformation\"]
+    },
+    {
+        \"commandName\": \"SubmitPythonTransformationCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"ObjectURI\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"newColumnName\",
+                \"type\": \"other\",
+                \"value\": \"ProductionURI\"
+            },
+            {
+                \"name\": \"transformationCode\",
+                \"type\": \"other\",
+                \"value\": \"return getValue(\\\"ObjectURI\\\")+\\\"/production\\\"\"
+            },
+            {
+                \"name\": \"errorDefaultValue\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"isJSONOutput\",
+                \"type\": \"other\",
+                \"value\": \"false\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"ObjectURI\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"ProductionURI\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"Transformation\"]
+    },
+    {
+        \"commandName\": \"SubmitPythonTransformationCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"Dates\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"newColumnName\",
+                \"type\": \"other\",
+                \"value\": \"BirthDate\"
+            },
+            {
+                \"name\": \"transformationCode\",
+                \"type\": \"other\",
+                \"value\": \"str = getValue(\\\"Dates\\\")\\nif \\\"born\\\" in str and not \\\"active\\\" in str and not \\\"founded\\\" in str:\\n    return str\\nelif \\\"-\\\" in str and not \\\"active\\\" in str and not \\\"founded\\\" in str:\\n    return \\\"born \\\" + str.rsplit(\\\"-\\\", 1)[0]\\nelse:\\n    return \\\"\\\"\"
+            },
+            {
+                \"name\": \"errorDefaultValue\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"isJSONOutput\",
+                \"type\": \"other\",
+                \"value\": \"false\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Dates\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"BirthDate\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"Transformation\"]
+    },
+    {
+        \"commandName\": \"SubmitPythonTransformationCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"Dates\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"newColumnName\",
+                \"type\": \"other\",
+                \"value\": \"DeathDate\"
+            },
+            {
+                \"name\": \"transformationCode\",
+                \"type\": \"other\",
+                \"value\": \"str = getValue(\\\"Dates\\\")\\nif \\\"-\\\" in str and not \\\"active\\\" in str and not \\\"founded\\\" in str:\\n    return \\\"died \\\" + str.rsplit(\\\"-\\\", 1)[1]\\nelse:\\n    return \\\"\\\"\"
+            },
+            {
+                \"name\": \"errorDefaultValue\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"isJSONOutput\",
+                \"type\": \"other\",
+                \"value\": \"false\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Dates\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"DeathDate\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"Transformation\"]
+    },
+    {
+        \"commandName\": \"SubmitPythonTransformationCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"DeathDate\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"newColumnName\",
+                \"type\": \"other\",
+                \"value\": \"DeathDateURI\"
+            },
+            {
+                \"name\": \"transformationCode\",
+                \"type\": \"other\",
+                \"value\": \"return getValue(\\\"ObjectURI\\\") + \\\"/death_date\\\"\"
+            },
+            {
+                \"name\": \"errorDefaultValue\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"isJSONOutput\",
+                \"type\": \"other\",
+                \"value\": \"false\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"ObjectURI\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"DeathDateURI\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"Transformation\"]
+    },
+    {
+        \"commandName\": \"SubmitPythonTransformationCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"BirthDate\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"newColumnName\",
+                \"type\": \"other\",
+                \"value\": \"BirthDateURI\"
+            },
+            {
+                \"name\": \"transformationCode\",
+                \"type\": \"other\",
+                \"value\": \"return getValue(\\\"ObjectURI\\\") + \\\"/birth_date\\\"\"
+            },
+            {
+                \"name\": \"errorDefaultValue\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"isJSONOutput\",
+                \"type\": \"other\",
+                \"value\": \"false\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"ObjectURI\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"BirthDateURI\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"Transformation\"]
+    },
+    {
+        \"commandName\": \"SetMetaPropertyCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"ObjectURI\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"metaPropertyName\",
+                \"type\": \"other\",
+                \"value\": \"isUriOfClass\"
+            },
+            {
+                \"name\": \"metaPropertyUri\",
+                \"type\": \"other\",
+                \"value\": \"http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object\"
+            },
+            {
+                \"name\": \"metaPropertyId\",
+                \"type\": \"other\",
+                \"value\": \"http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object1\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object\",
+                    \"DomainId\": \"http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object1\",
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
+                    \"DomainLabel\": \"http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object/E22_Man-Made_Object1 (add)\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"ObjectURI\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"ObjectURI\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"Maker\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://www.cidoc-crm.org/cidoc-crm/E41_Appellation\",
+                    \"DomainId\": \"http://www.cidoc-crm.org/cidoc-crm/E41_Appellation1\",
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://www.w3.org/2000/01/rdf-schema#label\",
+                    \"DomainLabel\": \"crm:E41_Appellation1\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Maker\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Maker\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"Nationality\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://www.cidoc-crm.org/cidoc-crm/E74_Group\",
+                    \"DomainId\": \"http://www.cidoc-crm.org/cidoc-crm/E74_Group1\",
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://www.w3.org/2000/01/rdf-schema#label\",
+                    \"DomainLabel\": \"http://www.cidoc-crm.org/cidoc-crm/E74_Group/E74_Group1 (add)\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Nationality\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Nationality\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetMetaPropertyCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"NationalityURI\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"metaPropertyName\",
+                \"type\": \"other\",
+                \"value\": \"isUriOfClass\"
+            },
+            {
+                \"name\": \"metaPropertyUri\",
+                \"type\": \"other\",
+                \"value\": \"http://www.cidoc-crm.org/cidoc-crm/E74_Group\"
+            },
+            {
+                \"name\": \"metaPropertyId\",
+                \"type\": \"other\",
+                \"value\": \"http://www.cidoc-crm.org/cidoc-crm/E74_Group1\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://www.cidoc-crm.org/cidoc-crm/E74_Group\",
+                    \"DomainId\": \"http://www.cidoc-crm.org/cidoc-crm/E74_Group1\",
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
+                    \"DomainLabel\": \"http://www.cidoc-crm.org/cidoc-crm/E74_Group/E74_Group1\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"NationalityURI\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"NationalityURI\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetMetaPropertyCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"AutryMakerURL\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"metaPropertyName\",
+                \"type\": \"other\",
+                \"value\": \"isUriOfClass\"
+            },
+            {
+                \"name\": \"metaPropertyUri\",
+                \"type\": \"other\",
+                \"value\": \"http://www.cidoc-crm.org/cidoc-crm/E39_Actor\"
+            },
+            {
+                \"name\": \"metaPropertyId\",
+                \"type\": \"other\",
+                \"value\": \"http://www.cidoc-crm.org/cidoc-crm/E39_Actor1\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://www.cidoc-crm.org/cidoc-crm/E39_Actor\",
+                    \"DomainId\": \"http://www.cidoc-crm.org/cidoc-crm/E39_Actor1\",
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
+                    \"DomainLabel\": \"http://www.cidoc-crm.org/cidoc-crm/E39_Actor/E39_Actor1\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"AutryMakerURL\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"AutryMakerURL\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"ULAN_ID\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://www.cidoc-crm.org/cidoc-crm/E82_Actor_Appellation\",
+                    \"DomainId\": \"http://www.cidoc-crm.org/cidoc-crm/E82_Actor_Appellation1\",
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://www.w3.org/2000/01/rdf-schema#label\",
+                    \"DomainLabel\": \"crm:E82_Actor_Appellation1 (add)\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"ULAN_ID\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"ULAN_ID\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetMetaPropertyCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"AutryMakerURL\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"metaPropertyName\",
+                \"type\": \"other\",
+                \"value\": \"isUriOfClass\"
+            },
+            {
+                \"name\": \"metaPropertyUri\",
+                \"type\": \"other\",
+                \"value\": \"http://www.cidoc-crm.org/cidoc-crm/E42_Identifier\"
+            },
+            {
+                \"name\": \"metaPropertyId\",
+                \"type\": \"other\",
+                \"value\": \"http://www.cidoc-crm.org/cidoc-crm/E42_Identifier2\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"AutryMakerURL\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"AutryMakerURL\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetMetaPropertyCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"DeathDate\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"metaPropertyName\",
+                \"type\": \"other\",
+                \"value\": \"isUriOfClass\"
+            },
+            {
+                \"name\": \"metaPropertyUri\",
+                \"type\": \"other\",
+                \"value\": \"http://www.cidoc-crm.org/cidoc-crm/E50_Date\"
+            },
+            {
+                \"name\": \"metaPropertyId\",
+                \"type\": \"other\",
+                \"value\": \"http://www.cidoc-crm.org/cidoc-crm/E50_Date1\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://www.cidoc-crm.org/cidoc-crm/E50_Date\",
+                    \"DomainId\": \"http://www.cidoc-crm.org/cidoc-crm/E50_Date1\",
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
+                    \"DomainLabel\": \"crm:E50_Date1\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"DeathDate\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"DeathDate\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"DeathDateURI\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span\",
+                    \"DomainId\": \"http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span2\",
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://www.cidoc-crm.org/cidoc-crm/P82_at_some_time_within\",
+                    \"DomainLabel\": \"crm:E52_Time-Span2\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"xsd:string\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"DeathDateURI\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"DeathDateURI\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"BirthDate\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span\",
+                    \"DomainId\": \"http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span1\",
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://www.cidoc-crm.org/cidoc-crm/P82_at_some_time_within\",
+                    \"DomainLabel\": \"crm:E52_Time-Span1\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"BirthDate\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"BirthDate\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetMetaPropertyCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"BirthDateURI\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"metaPropertyName\",
+                \"type\": \"other\",
+                \"value\": \"isUriOfClass\"
+            },
+            {
+                \"name\": \"metaPropertyUri\",
+                \"type\": \"other\",
+                \"value\": \"http://www.cidoc-crm.org/cidoc-crm/E50_Date\"
+            },
+            {
+                \"name\": \"metaPropertyId\",
+                \"type\": \"other\",
+                \"value\": \"http://www.cidoc-crm.org/cidoc-crm/E50_Date2\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://www.cidoc-crm.org/cidoc-crm/E50_Date\",
+                    \"DomainId\": \"http://www.cidoc-crm.org/cidoc-crm/E50_Date2\",
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
+                    \"DomainLabel\": \"crm:E50_Date2 (add)\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"BirthDateURI\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"BirthDateURI\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"ChangeInternalNodeLinksCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"initialEdges\",
+                \"type\": \"other\",
+                \"value\": []
+            },
+            {
+                \"name\": \"alignmentId\",
+                \"type\": \"other\",
+                \"value\": \"WSP1:WS1AL\"
+            },
+            {
+                \"name\": \"newEdges\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"edgeId\": \"http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by\",
+                    \"edgeTargetId\": \"http://www.cidoc-crm.org/cidoc-crm/E12_Production1\",
+                    \"edgeTargetUri\": \"http://www.cidoc-crm.org/cidoc-crm/E12_Production\",
+                    \"edgeSourceId\": \"http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object1\",
+                    \"edgeSourceUri\": \"http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object\"
+                }]
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"ChangeInternalNodeLinksCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"initialEdges\",
+                \"type\": \"other\",
+                \"value\": []
+            },
+            {
+                \"name\": \"alignmentId\",
+                \"type\": \"other\",
+                \"value\": \"WSP1:WS1AL\"
+            },
+            {
+                \"name\": \"newEdges\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"edgeId\": \"http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by\",
+                    \"edgeTargetId\": \"http://www.cidoc-crm.org/cidoc-crm/E39_Actor1\",
+                    \"edgeTargetUri\": \"http://www.cidoc-crm.org/cidoc-crm/E39_Actor\",
+                    \"edgeSourceId\": \"http://www.cidoc-crm.org/cidoc-crm/E12_Production1\",
+                    \"edgeSourceUri\": \"http://www.cidoc-crm.org/cidoc-crm/E12_Production\"
+                }]
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"ChangeInternalNodeLinksCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"initialEdges\",
+                \"type\": \"other\",
+                \"value\": []
+            },
+            {
+                \"name\": \"alignmentId\",
+                \"type\": \"other\",
+                \"value\": \"WSP1:WS1AL\"
+            },
+            {
+                \"name\": \"newEdges\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"edgeId\": \"http://www.cidoc-crm.org/cidoc-crm/P131_is_identified_by\",
+                    \"edgeTargetId\": \"http://www.cidoc-crm.org/cidoc-crm/E82_Actor_Appellation1\",
+                    \"edgeTargetUri\": \"http://www.cidoc-crm.org/cidoc-crm/E82_Actor_Appellation\",
+                    \"edgeSourceId\": \"http://www.cidoc-crm.org/cidoc-crm/E39_Actor1\",
+                    \"edgeSourceUri\": \"http://www.cidoc-crm.org/cidoc-crm/E39_Actor\"
+                }]
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"ChangeInternalNodeLinksCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"initialEdges\",
+                \"type\": \"other\",
+                \"value\": []
+            },
+            {
+                \"name\": \"alignmentId\",
+                \"type\": \"other\",
+                \"value\": \"WSP1:WS1AL\"
+            },
+            {
+                \"name\": \"newEdges\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"edgeId\": \"http://www.cidoc-crm.org/cidoc-crm/P129_is_about\",
+                    \"edgeTargetId\": \"http://www.cidoc-crm.org/cidoc-crm/E39_Actor1\",
+                    \"edgeTargetUri\": \"http://www.cidoc-crm.org/cidoc-crm/E39_Actor\",
+                    \"edgeSourceId\": \"http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object1\",
+                    \"edgeSourceUri\": \"http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object\"
+                }]
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"ChangeInternalNodeLinksCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"initialEdges\",
+                \"type\": \"other\",
+                \"value\": []
+            },
+            {
+                \"name\": \"alignmentId\",
+                \"type\": \"other\",
+                \"value\": \"WSP1:WS1AL\"
+            },
+            {
+                \"name\": \"newEdges\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"edgeId\": \"http://www.cidoc-crm.org/cidoc-crm/P107i_is_current_or_former_member_of\",
+                    \"edgeTargetId\": \"http://www.cidoc-crm.org/cidoc-crm/E74_Group1\",
+                    \"edgeTargetUri\": \"http://www.cidoc-crm.org/cidoc-crm/E74_Group\",
+                    \"edgeSourceId\": \"http://www.cidoc-crm.org/cidoc-crm/E39_Actor1\",
+                    \"edgeSourceUri\": \"http://www.cidoc-crm.org/cidoc-crm/E39_Actor\"
+                }]
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"ChangeInternalNodeLinksCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"initialEdges\",
+                \"type\": \"other\",
+                \"value\": []
+            },
+            {
+                \"name\": \"alignmentId\",
+                \"type\": \"other\",
+                \"value\": \"WSP2:WS3813AL\"
+            },
+            {
+                \"name\": \"newEdges\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"edgeId\": \"http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by\",
+                    \"edgeTargetId\": \"http://www.cidoc-crm.org/cidoc-crm/E42_Identifier1\",
+                    \"edgeTargetUri\": \"http://www.cidoc-crm.org/cidoc-crm/E42_Identifier\",
+                    \"edgeSourceId\": \"http://www.cidoc-crm.org/cidoc-crm/E39_Actor1\",
+                    \"edgeSourceUri\": \"http://www.cidoc-crm.org/cidoc-crm/E39_Actor\"
+                }]
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"ChangeInternalNodeLinksCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"initialEdges\",
+                \"type\": \"other\",
+                \"value\": []
+            },
+            {
+                \"name\": \"alignmentId\",
+                \"type\": \"other\",
+                \"value\": \"WSP3:WS5AL\"
+            },
+            {
+                \"name\": \"newEdges\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"edgeTargetId\": \"http://www.cidoc-crm.org/cidoc-crm/E42_Identifier2\",
+                    \"edgeId\": \"http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by\",
+                    \"edgeTargetUri\": \"http://www.cidoc-crm.org/cidoc-crm/E42_Identifier\",
+                    \"edgeSourceId\": \"http://www.cidoc-crm.org/cidoc-crm/E39_Actor1\",
+                    \"edgeSourceUri\": \"http://www.cidoc-crm.org/cidoc-crm/E39_Actor\"
+                }]
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"ChangeInternalNodeLinksCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"initialEdges\",
+                \"type\": \"other\",
+                \"value\": [
+                    {
+                        \"edgeTargetId\": \"http://www.cidoc-crm.org/cidoc-crm/E42_Identifier1\",
+                        \"edgeId\": \"http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by\",
+                        \"edgeSourceId\": \"http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object1\"
+                    },
+                    {
+                        \"edgeTargetId\": \"http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object1\",
+                        \"edgeId\": \"http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by\",
+                        \"edgeSourceId\": \"http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object1\"
+                    }
+                ]
+            },
+            {
+                \"name\": \"newEdges\",
+                \"type\": \"other\",
+                \"value\": [
+                    {
+                        \"edgeTargetId\": \"http://www.cidoc-crm.org/cidoc-crm/E42_Identifier1\",
+                        \"edgeId\": \"http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by\",
+                        \"edgeSourceId\": \"http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object1\"
+                    },
+                    {
+                        \"edgeTargetId\": \"http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object1\",
+                        \"edgeId\": \"http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by\",
+                        \"edgeSourceId\": \"http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object1\"
+                    }
+                ]
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"ChangeInternalNodeLinksCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"initialEdges\",
+                \"type\": \"other\",
+                \"value\": []
+            },
+            {
+                \"name\": \"alignmentId\",
+                \"type\": \"other\",
+                \"value\": \"WSP3:WS5AL\"
+            },
+            {
+                \"name\": \"newEdges\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"edgeTargetId\": \"http://www.cidoc-crm.org/cidoc-crm/E39_Actor1\",
+                    \"edgeId\": \"http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by\",
+                    \"edgeTargetUri\": \"http://www.cidoc-crm.org/cidoc-crm/E39_Actor\",
+                    \"edgeSourceId\": \"http://www.cidoc-crm.org/cidoc-crm/E12_Production1\",
+                    \"edgeSourceUri\": \"http://www.cidoc-crm.org/cidoc-crm/E12_Production\"
+                }]
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"ChangeInternalNodeLinksCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"alignmentId\",
+                \"type\": \"other\",
+                \"value\": \"WSP3:WS5AL\"
+            },
+            {
+                \"name\": \"initialEdges\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"edgeTargetId\": \"http://www.cidoc-crm.org/cidoc-crm/E39_Actor1\",
+                    \"edgeId\": \"http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by\",
+                    \"edgeSourceId\": \"http://www.cidoc-crm.org/cidoc-crm/E12_Production1\"
+                }]
+            },
+            {
+                \"name\": \"newEdges\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"edgeTargetId\": \"http://www.cidoc-crm.org/cidoc-crm/E39_Actor2\",
+                    \"edgeId\": \"http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by\",
+                    \"edgeTargetUri\": \"http://www.cidoc-crm.org/cidoc-crm/E39_Actor\",
+                    \"edgeSourceId\": \"http://www.cidoc-crm.org/cidoc-crm/E12_Production1\",
+                    \"edgeSourceUri\": \"http://www.cidoc-crm.org/cidoc-crm/E12_Production\"
+                }]
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"ChangeInternalNodeLinksCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"initialEdges\",
+                \"type\": \"other\",
+                \"value\": []
+            },
+            {
+                \"name\": \"alignmentId\",
+                \"type\": \"other\",
+                \"value\": \"WSP3:WS5AL\"
+            },
+            {
+                \"name\": \"newEdges\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"edgeTargetId\": \"http://www.cidoc-crm.org/cidoc-crm/E41_Appellation1\",
+                    \"edgeId\": \"http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by\",
+                    \"edgeTargetUri\": \"http://www.cidoc-crm.org/cidoc-crm/E41_Appellation\",
+                    \"edgeSourceId\": \"http://www.cidoc-crm.org/cidoc-crm/E39_Actor2\",
+                    \"edgeSourceUri\": \"http://www.cidoc-crm.org/cidoc-crm/E39_Actor\"
+                }]
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"ChangeInternalNodeLinksCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"initialEdges\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"edgeTargetId\": \"http://www.cidoc-crm.org/cidoc-crm/E82_Actor_Appellation1\",
+                    \"edgeId\": \"http://www.cidoc-crm.org/cidoc-crm/P131_is_identified_by\",
+                    \"edgeSourceId\": \"http://www.cidoc-crm.org/cidoc-crm/E39_Actor1\"
+                }]
+            },
+            {
+                \"name\": \"alignmentId\",
+                \"type\": \"other\",
+                \"value\": \"WSP3:WS5AL\"
+            },
+            {
+                \"name\": \"newEdges\",
+                \"type\": \"other\",
+                \"value\": []
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"ChangeInternalNodeLinksCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"initialEdges\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"edgeTargetId\": \"http://www.cidoc-crm.org/cidoc-crm/E82_Actor_Appellation1\",
+                    \"edgeId\": \"http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by\",
+                    \"edgeSourceId\": \"http://www.cidoc-crm.org/cidoc-crm/E39_Actor1\"
+                }]
+            },
+            {
+                \"name\": \"alignmentId\",
+                \"type\": \"other\",
+                \"value\": \"WSP3:WS5AL\"
+            },
+            {
+                \"name\": \"newEdges\",
+                \"type\": \"other\",
+                \"value\": []
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"ChangeInternalNodeLinksCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"alignmentId\",
+                \"type\": \"other\",
+                \"value\": \"WSP3:WS5AL\"
+            },
+            {
+                \"name\": \"initialEdges\",
+                \"type\": \"other\",
+                \"value\": [
+                    {
+                        \"edgeTargetId\": \"http://www.cidoc-crm.org/cidoc-crm/E39_Actor2\",
+                        \"edgeId\": \"http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by\",
+                        \"edgeSourceId\": \"http://www.cidoc-crm.org/cidoc-crm/E12_Production1\"
+                    },
+                    {
+                        \"edgeTargetId\": \"http://www.cidoc-crm.org/cidoc-crm/E41_Appellation1\",
+                        \"edgeId\": \"http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by\",
+                        \"edgeSourceId\": \"http://www.cidoc-crm.org/cidoc-crm/E39_Actor2\"
+                    }
+                ]
+            },
+            {
+                \"name\": \"newEdges\",
+                \"type\": \"other\",
+                \"value\": [
+                    {
+                        \"edgeTargetId\": \"http://www.cidoc-crm.org/cidoc-crm/E39_Actor1\",
+                        \"edgeId\": \"http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by\",
+                        \"edgeTargetUri\": \"http://www.cidoc-crm.org/cidoc-crm/E39_Actor\",
+                        \"edgeSourceId\": \"http://www.cidoc-crm.org/cidoc-crm/E12_Production1\",
+                        \"edgeSourceUri\": \"http://www.cidoc-crm.org/cidoc-crm/E12_Production\"
+                    },
+                    {
+                        \"edgeTargetId\": \"http://www.cidoc-crm.org/cidoc-crm/E41_Appellation1\",
+                        \"edgeId\": \"http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by\",
+                        \"edgeTargetUri\": \"http://www.cidoc-crm.org/cidoc-crm/E41_Appellation\",
+                        \"edgeSourceId\": \"http://www.cidoc-crm.org/cidoc-crm/E39_Actor1\",
+                        \"edgeSourceUri\": \"http://www.cidoc-crm.org/cidoc-crm/E39_Actor\"
+                    }
+                ]
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"ChangeInternalNodeLinksCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"alignmentId\",
+                \"type\": \"other\",
+                \"value\": \"WSP5:WS5AL\"
+            },
+            {
+                \"name\": \"initialEdges\",
+                \"type\": \"other\",
+                \"value\": [
+                    {
+                        \"edgeTargetId\": \"http://www.cidoc-crm.org/cidoc-crm/E42_Identifier1\",
+                        \"edgeId\": \"http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by\",
+                        \"edgeSourceId\": \"http://www.cidoc-crm.org/cidoc-crm/E39_Actor1\"
+                    },
+                    {
+                        \"edgeTargetId\": \"http://www.cidoc-crm.org/cidoc-crm/E42_Identifier1\",
+                        \"edgeId\": \"http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by\",
+                        \"edgeSourceId\": \"http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object1\"
+                    }
+                ]
+            },
+            {
+                \"name\": \"newEdges\",
+                \"type\": \"other\",
+                \"value\": [
+                    {
+                        \"edgeTargetId\": \"http://www.cidoc-crm.org/cidoc-crm/E82_Actor_Appellation1\",
+                        \"edgeId\": \"http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by\",
+                        \"edgeTargetUri\": \"http://www.cidoc-crm.org/cidoc-crm/E82_Actor_Appellation\",
+                        \"edgeSourceId\": \"http://www.cidoc-crm.org/cidoc-crm/E39_Actor1\",
+                        \"edgeSourceUri\": \"http://www.cidoc-crm.org/cidoc-crm/E39_Actor\"
+                    },
+                    {
+                        \"edgeTargetId\": \"http://www.cidoc-crm.org/cidoc-crm/E82_Actor_Appellation1\",
+                        \"edgeId\": \"http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by\",
+                        \"edgeTargetUri\": \"http://www.cidoc-crm.org/cidoc-crm/E82_Actor_Appellation\",
+                        \"edgeSourceId\": \"http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object1\",
+                        \"edgeSourceUri\": \"http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object\"
+                    }
+                ]
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"ChangeInternalNodeLinksCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"initialEdges\",
+                \"type\": \"other\",
+                \"value\": [
+                    {
+                        \"edgeTargetId\": \"http://www.cidoc-crm.org/cidoc-crm/E82_Actor_Appellation1\",
+                        \"edgeId\": \"http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by\",
+                        \"edgeSourceId\": \"http://www.cidoc-crm.org/cidoc-crm/E39_Actor1\"
+                    },
+                    {
+                        \"edgeTargetId\": \"http://www.cidoc-crm.org/cidoc-crm/E82_Actor_Appellation1\",
+                        \"edgeId\": \"http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by\",
+                        \"edgeSourceId\": \"http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object1\"
+                    }
+                ]
+            },
+            {
+                \"name\": \"alignmentId\",
+                \"type\": \"other\",
+                \"value\": \"WSP1:WS5AL\"
+            },
+            {
+                \"name\": \"newEdges\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"edgeTargetId\": \"http://www.cidoc-crm.org/cidoc-crm/E82_Actor_Appellation1\",
+                    \"edgeId\": \"http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by\",
+                    \"edgeTargetUri\": \"http://www.cidoc-crm.org/cidoc-crm/E82_Actor_Appellation\",
+                    \"edgeSourceId\": \"http://www.cidoc-crm.org/cidoc-crm/E39_Actor1\",
+                    \"edgeSourceUri\": \"http://www.cidoc-crm.org/cidoc-crm/E39_Actor\"
+                }]
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"ChangeInternalNodeLinksCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"initialEdges\",
+                \"type\": \"other\",
+                \"value\": []
+            },
+            {
+                \"name\": \"alignmentId\",
+                \"type\": \"other\",
+                \"value\": \"WSP4:WS5AL\"
+            },
+            {
+                \"name\": \"newEdges\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"edgeTargetId\": \"http://www.cidoc-crm.org/cidoc-crm/E67_Birth1\",
+                    \"edgeId\": \"http://www.cidoc-crm.org/cidoc-crm/P98i_was_born\",
+                    \"edgeTargetUri\": \"http://www.cidoc-crm.org/cidoc-crm/E67_Birth\",
+                    \"edgeSourceId\": \"http://www.cidoc-crm.org/cidoc-crm/E39_Actor1\",
+                    \"edgeSourceUri\": \"http://www.cidoc-crm.org/cidoc-crm/E39_Actor\"
+                }]
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"ChangeInternalNodeLinksCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"initialEdges\",
+                \"type\": \"other\",
+                \"value\": []
+            },
+            {
+                \"name\": \"alignmentId\",
+                \"type\": \"other\",
+                \"value\": \"WSP4:WS5AL\"
+            },
+            {
+                \"name\": \"newEdges\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"edgeTargetId\": \"http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span1\",
+                    \"edgeId\": \"http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span\",
+                    \"edgeTargetUri\": \"http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span\",
+                    \"edgeSourceId\": \"http://www.cidoc-crm.org/cidoc-crm/E67_Birth1\",
+                    \"edgeSourceUri\": \"http://www.cidoc-crm.org/cidoc-crm/E67_Birth\"
+                }]
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"ChangeInternalNodeLinksCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"initialEdges\",
+                \"type\": \"other\",
+                \"value\": []
+            },
+            {
+                \"name\": \"alignmentId\",
+                \"type\": \"other\",
+                \"value\": \"WSP3:WS5AL\"
+            },
+            {
+                \"name\": \"newEdges\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"edgeTargetId\": \"http://www.cidoc-crm.org/cidoc-crm/E50_Date1\",
+                    \"edgeId\": \"http://www.cidoc-crm.org/cidoc-crm/P78_is_identified_by\",
+                    \"edgeTargetUri\": \"http://www.cidoc-crm.org/cidoc-crm/E50_Date\",
+                    \"edgeSourceId\": \"http://www.cidoc-crm.org/cidoc-crm/E21_Person1\",
+                    \"edgeSourceUri\": \"http://www.cidoc-crm.org/cidoc-crm/E21_Person\"
+                }]
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"ChangeInternalNodeLinksCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"initialEdges\",
+                \"type\": \"other\",
+                \"value\": []
+            },
+            {
+                \"name\": \"alignmentId\",
+                \"type\": \"other\",
+                \"value\": \"WSP3:WS5AL\"
+            },
+            {
+                \"name\": \"newEdges\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"edgeTargetId\": \"http://www.cidoc-crm.org/cidoc-crm/E69_Death1\",
+                    \"edgeId\": \"http://www.cidoc-crm.org/cidoc-crm/P100i_died_in\",
+                    \"edgeTargetUri\": \"http://www.cidoc-crm.org/cidoc-crm/E69_Death\",
+                    \"edgeSourceId\": \"http://www.cidoc-crm.org/cidoc-crm/E21_Person1\",
+                    \"edgeSourceUri\": \"http://www.cidoc-crm.org/cidoc-crm/E21_Person\"
+                }]
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"ChangeInternalNodeLinksCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"initialEdges\",
+                \"type\": \"other\",
+                \"value\": []
+            },
+            {
+                \"name\": \"alignmentId\",
+                \"type\": \"other\",
+                \"value\": \"WSP3:WS5AL\"
+            },
+            {
+                \"name\": \"newEdges\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"edgeTargetId\": \"http://www.cidoc-crm.org/cidoc-crm/E42_Identifier1\",
+                    \"edgeId\": \"http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span\",
+                    \"edgeTargetUri\": \"http://www.cidoc-crm.org/cidoc-crm/E42_Identifier\",
+                    \"edgeSourceId\": \"http://www.cidoc-crm.org/cidoc-crm/E69_Death1\",
+                    \"edgeSourceUri\": \"http://www.cidoc-crm.org/cidoc-crm/E69_Death\"
+                }]
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"ChangeInternalNodeLinksCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"alignmentId\",
+                \"type\": \"other\",
+                \"value\": \"WSP3:WS5AL\"
+            },
+            {
+                \"name\": \"initialEdges\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"edgeTargetId\": \"http://www.cidoc-crm.org/cidoc-crm/E42_Identifier1\",
+                    \"edgeId\": \"http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span\",
+                    \"edgeSourceId\": \"http://www.cidoc-crm.org/cidoc-crm/E69_Death1\"
+                }]
+            },
+            {
+                \"name\": \"newEdges\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"edgeTargetId\": \"http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span2\",
+                    \"edgeId\": \"http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span\",
+                    \"edgeTargetUri\": \"http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span\",
+                    \"edgeSourceId\": \"http://www.cidoc-crm.org/cidoc-crm/E69_Death1\",
+                    \"edgeSourceUri\": \"http://www.cidoc-crm.org/cidoc-crm/E69_Death\"
+                }]
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"ChangeInternalNodeLinksCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"initialEdges\",
+                \"type\": \"other\",
+                \"value\": []
+            },
+            {
+                \"name\": \"alignmentId\",
+                \"type\": \"other\",
+                \"value\": \"WSP3:WS5AL\"
+            },
+            {
+                \"name\": \"newEdges\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"edgeTargetId\": \"http://www.cidoc-crm.org/cidoc-crm/E67_Birth1\",
+                    \"edgeId\": \"http://www.cidoc-crm.org/cidoc-crm/P98i_was_born\",
+                    \"edgeTargetUri\": \"http://www.cidoc-crm.org/cidoc-crm/E67_Birth\",
+                    \"edgeSourceId\": \"http://www.cidoc-crm.org/cidoc-crm/E21_Person1\",
+                    \"edgeSourceUri\": \"http://www.cidoc-crm.org/cidoc-crm/E21_Person\"
+                }]
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"ChangeInternalNodeLinksCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"alignmentId\",
+                \"type\": \"other\",
+                \"value\": \"WSP3:WS5AL\"
+            },
+            {
+                \"name\": \"initialEdges\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"edgeTargetId\": \"http://www.cidoc-crm.org/cidoc-crm/E67_Birth1\",
+                    \"edgeId\": \"http://www.cidoc-crm.org/cidoc-crm/P98i_was_born\",
+                    \"edgeSourceId\": \"http://www.cidoc-crm.org/cidoc-crm/E21_Person1\"
+                }]
+            },
+            {
+                \"name\": \"newEdges\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"edgeTargetId\": \"http://www.cidoc-crm.org/cidoc-crm/E67_Birth2\",
+                    \"edgeId\": \"http://www.cidoc-crm.org/cidoc-crm/P98i_was_born\",
+                    \"edgeTargetUri\": \"http://www.cidoc-crm.org/cidoc-crm/E67_Birth\",
+                    \"edgeSourceId\": \"http://www.cidoc-crm.org/cidoc-crm/E21_Person1\",
+                    \"edgeSourceUri\": \"http://www.cidoc-crm.org/cidoc-crm/E21_Person\"
+                }]
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"ChangeInternalNodeLinksCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"initialEdges\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"edgeTargetId\": \"http://www.cidoc-crm.org/cidoc-crm/E67_Birth1\",
+                    \"edgeId\": \"http://www.cidoc-crm.org/cidoc-crm/P98i_was_born\",
+                    \"edgeSourceId\": \"http://www.cidoc-crm.org/cidoc-crm/E39_Actor1\"
+                }]
+            },
+            {
+                \"name\": \"alignmentId\",
+                \"type\": \"other\",
+                \"value\": \"WSP3:WS5AL\"
+            },
+            {
+                \"name\": \"newEdges\",
+                \"type\": \"other\",
+                \"value\": []
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"ChangeInternalNodeLinksCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"initialEdges\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"edgeTargetId\": \"http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span1\",
+                    \"edgeId\": \"http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span\",
+                    \"edgeSourceId\": \"http://www.cidoc-crm.org/cidoc-crm/E67_Birth1\"
+                }]
+            },
+            {
+                \"name\": \"alignmentId\",
+                \"type\": \"other\",
+                \"value\": \"WSP3:WS5AL\"
+            },
+            {
+                \"name\": \"newEdges\",
+                \"type\": \"other\",
+                \"value\": []
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"ChangeInternalNodeLinksCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"initialEdges\",
+                \"type\": \"other\",
+                \"value\": []
+            },
+            {
+                \"name\": \"alignmentId\",
+                \"type\": \"other\",
+                \"value\": \"WSP3:WS5AL\"
+            },
+            {
+                \"name\": \"newEdges\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"edgeTargetId\": \"http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span1\",
+                    \"edgeId\": \"http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span\",
+                    \"edgeTargetUri\": \"http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span\",
+                    \"edgeSourceId\": \"http://www.cidoc-crm.org/cidoc-crm/E67_Birth2\",
+                    \"edgeSourceUri\": \"http://www.cidoc-crm.org/cidoc-crm/E67_Birth\"
+                }]
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"ChangeInternalNodeLinksCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"initialEdges\",
+                \"type\": \"other\",
+                \"value\": []
+            },
+            {
+                \"name\": \"alignmentId\",
+                \"type\": \"other\",
+                \"value\": \"WSP3:WS5AL\"
+            },
+            {
+                \"name\": \"newEdges\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"edgeTargetId\": \"http://www.cidoc-crm.org/cidoc-crm/E50_Date2\",
+                    \"edgeId\": \"http://www.cidoc-crm.org/cidoc-crm/P78_is_identified_by\",
+                    \"edgeTargetUri\": \"http://www.cidoc-crm.org/cidoc-crm/E50_Date\",
+                    \"edgeSourceId\": \"http://www.cidoc-crm.org/cidoc-crm/E21_Person1\",
+                    \"edgeSourceUri\": \"http://www.cidoc-crm.org/cidoc-crm/E21_Person\"
+                }]
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"ChangeInternalNodeLinksCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"alignmentId\",
+                \"type\": \"other\",
+                \"value\": \"WSP3:WS5AL\"
+            },
+            {
+                \"name\": \"initialEdges\",
+                \"type\": \"other\",
+                \"value\": [
+                    {
+                        \"edgeTargetId\": \"http://www.cidoc-crm.org/cidoc-crm/E39_Actor1\",
+                        \"edgeId\": \"http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by\",
+                        \"edgeSourceId\": \"http://www.cidoc-crm.org/cidoc-crm/E12_Production1\"
+                    },
+                    {
+                        \"edgeTargetId\": \"http://www.cidoc-crm.org/cidoc-crm/E41_Appellation1\",
+                        \"edgeId\": \"http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by\",
+                        \"edgeSourceId\": \"http://www.cidoc-crm.org/cidoc-crm/E39_Actor1\"
+                    },
+                    {
+                        \"edgeTargetId\": \"http://www.cidoc-crm.org/cidoc-crm/E42_Identifier2\",
+                        \"edgeId\": \"http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by\",
+                        \"edgeSourceId\": \"http://www.cidoc-crm.org/cidoc-crm/E39_Actor1\"
+                    },
+                    {
+                        \"edgeTargetId\": \"http://www.cidoc-crm.org/cidoc-crm/E74_Group1\",
+                        \"edgeId\": \"http://www.cidoc-crm.org/cidoc-crm/P107i_is_current_or_former_member_of\",
+                        \"edgeSourceId\": \"http://www.cidoc-crm.org/cidoc-crm/E39_Actor1\"
+                    },
+                    {
+                        \"edgeTargetId\": \"http://www.cidoc-crm.org/cidoc-crm/E82_Actor_Appellation1\",
+                        \"edgeId\": \"http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by\",
+                        \"edgeSourceId\": \"http://www.cidoc-crm.org/cidoc-crm/E39_Actor1\"
+                    },
+                    {
+                        \"edgeTargetId\": \"http://www.cidoc-crm.org/cidoc-crm/E39_Actor1\",
+                        \"edgeId\": \"http://www.cidoc-crm.org/cidoc-crm/P129_is_about\",
+                        \"edgeSourceId\": \"http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object1\"
+                    }
+                ]
+            },
+            {
+                \"name\": \"newEdges\",
+                \"type\": \"other\",
+                \"value\": [
+                    {
+                        \"edgeTargetId\": \"http://www.cidoc-crm.org/cidoc-crm/E21_Person1\",
+                        \"edgeId\": \"http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by\",
+                        \"edgeTargetUri\": \"http://www.cidoc-crm.org/cidoc-crm/E21_Person\",
+                        \"edgeSourceId\": \"http://www.cidoc-crm.org/cidoc-crm/E12_Production1\",
+                        \"edgeSourceUri\": \"http://www.cidoc-crm.org/cidoc-crm/E12_Production\"
+                    },
+                    {
+                        \"edgeTargetId\": \"http://www.cidoc-crm.org/cidoc-crm/E41_Appellation1\",
+                        \"edgeId\": \"http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by\",
+                        \"edgeTargetUri\": \"http://www.cidoc-crm.org/cidoc-crm/E41_Appellation\",
+                        \"edgeSourceId\": \"http://www.cidoc-crm.org/cidoc-crm/E21_Person1\",
+                        \"edgeSourceUri\": \"http://www.cidoc-crm.org/cidoc-crm/E21_Person\"
+                    },
+                    {
+                        \"edgeTargetId\": \"http://www.cidoc-crm.org/cidoc-crm/E42_Identifier2\",
+                        \"edgeId\": \"http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by\",
+                        \"edgeTargetUri\": \"http://www.cidoc-crm.org/cidoc-crm/E42_Identifier\",
+                        \"edgeSourceId\": \"http://www.cidoc-crm.org/cidoc-crm/E21_Person1\",
+                        \"edgeSourceUri\": \"http://www.cidoc-crm.org/cidoc-crm/E21_Person\"
+                    },
+                    {
+                        \"edgeTargetId\": \"http://www.cidoc-crm.org/cidoc-crm/E74_Group1\",
+                        \"edgeId\": \"http://www.cidoc-crm.org/cidoc-crm/P107i_is_current_or_former_member_of\",
+                        \"edgeTargetUri\": \"http://www.cidoc-crm.org/cidoc-crm/E74_Group\",
+                        \"edgeSourceId\": \"http://www.cidoc-crm.org/cidoc-crm/E21_Person1\",
+                        \"edgeSourceUri\": \"http://www.cidoc-crm.org/cidoc-crm/E21_Person\"
+                    },
+                    {
+                        \"edgeTargetId\": \"http://www.cidoc-crm.org/cidoc-crm/E82_Actor_Appellation1\",
+                        \"edgeId\": \"http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by\",
+                        \"edgeTargetUri\": \"http://www.cidoc-crm.org/cidoc-crm/E82_Actor_Appellation\",
+                        \"edgeSourceId\": \"http://www.cidoc-crm.org/cidoc-crm/E21_Person1\",
+                        \"edgeSourceUri\": \"http://www.cidoc-crm.org/cidoc-crm/E21_Person\"
+                    },
+                    {
+                        \"edgeTargetId\": \"http://www.cidoc-crm.org/cidoc-crm/E21_Person1\",
+                        \"edgeId\": \"http://www.cidoc-crm.org/cidoc-crm/P129_is_about\",
+                        \"edgeTargetUri\": \"http://www.cidoc-crm.org/cidoc-crm/E21_Person\",
+                        \"edgeSourceId\": \"http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object1\",
+                        \"edgeSourceUri\": \"http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object\"
+                    }
+                ]
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    }
+]""" .
+
+km-dev:TriplesMap_ff81b86f-a873-4d4c-9e13-66c13f011a41 a rr:TriplesMap .
+
+_:node1atmjgbjax1 km-dev:hasTriplesMap km-dev:TriplesMap_ff81b86f-a873-4d4c-9e13-66c13f011a41 .
+
+km-dev:TriplesMap_ff81b86f-a873-4d4c-9e13-66c13f011a41 km-dev:isPartOfMapping _:node1atmjgbjax1 .
+
+_:node1atmjgbjax2 rr:tableName "AutryMakers_new_Sheet1" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1atmjgbjax1 .
+
+_:node1atmjgbjax1 km-dev:hasLogicalTable _:node1atmjgbjax2 .
+
+km-dev:TriplesMap_ff81b86f-a873-4d4c-9e13-66c13f011a41 rr:logicalTable _:node1atmjgbjax2 ;
+	rr:subjectMap _:node1atmjgbjax3 .
+
+_:node1atmjgbjax1 km-dev:hasSubjectMap _:node1atmjgbjax3 .
+
+_:node1atmjgbjax3 km-dev:isPartOfMapping _:node1atmjgbjax1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://www.cidoc-crm.org/cidoc-crm/E21_Person1" ;
+	rr:class crm:E21_Person ;
+	rr:termType rr:BlankNode ;
+	km-dev:namePrefix "crm:E21_Person1" .
+
+km-dev:PredicateObjectMap_1da90346-6aa0-4a69-9b96-1d9161c3c1bc rr:predicate crm:P1_is_identified_by .
+
+km-dev:RefObjectMap_9142f494-0a2c-499c-8518-f28bde727ad6 a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_d3604939-e330-4e78-970e-60e7be387318 ;
+	km-dev:isPartOfMapping _:node1atmjgbjax1 .
+
+_:node1atmjgbjax1 km-dev:hasObjectMap km-dev:RefObjectMap_9142f494-0a2c-499c-8518-f28bde727ad6 .
+
+km-dev:PredicateObjectMap_1da90346-6aa0-4a69-9b96-1d9161c3c1bc rr:objectMap km-dev:RefObjectMap_9142f494-0a2c-499c-8518-f28bde727ad6 .
+
+km-dev:TriplesMap_ff81b86f-a873-4d4c-9e13-66c13f011a41 rr:predicateObjectMap km-dev:PredicateObjectMap_1da90346-6aa0-4a69-9b96-1d9161c3c1bc .
+
+km-dev:PredicateObjectMap_1da90346-6aa0-4a69-9b96-1d9161c3c1bc a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1atmjgbjax1 .
+
+_:node1atmjgbjax1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_1da90346-6aa0-4a69-9b96-1d9161c3c1bc .
+
+km-dev:PredicateObjectMap_9c66949c-37dd-4479-97f1-448d9e2a1043 rr:predicate crm:P1_is_identified_by .
+
+km-dev:RefObjectMap_349f4c01-bbc8-4651-a6b8-8299bdd62d5b a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_66461416-09fe-4828-b164-ac0a1b922cb5 ;
+	km-dev:isPartOfMapping _:node1atmjgbjax1 .
+
+_:node1atmjgbjax1 km-dev:hasObjectMap km-dev:RefObjectMap_349f4c01-bbc8-4651-a6b8-8299bdd62d5b .
+
+km-dev:PredicateObjectMap_9c66949c-37dd-4479-97f1-448d9e2a1043 rr:objectMap km-dev:RefObjectMap_349f4c01-bbc8-4651-a6b8-8299bdd62d5b .
+
+km-dev:TriplesMap_ff81b86f-a873-4d4c-9e13-66c13f011a41 rr:predicateObjectMap km-dev:PredicateObjectMap_9c66949c-37dd-4479-97f1-448d9e2a1043 .
+
+km-dev:PredicateObjectMap_9c66949c-37dd-4479-97f1-448d9e2a1043 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1atmjgbjax1 .
+
+_:node1atmjgbjax1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_9c66949c-37dd-4479-97f1-448d9e2a1043 .
+
+km-dev:PredicateObjectMap_c72c88bf-c168-4358-a741-792719d46224 rr:predicate crm:P78_is_identified_by .
+
+km-dev:RefObjectMap_fcae092f-874a-4b40-8d82-47df2554b196 a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_c8bf3a3e-17e4-4bab-9c35-1167060ba437 ;
+	km-dev:isPartOfMapping _:node1atmjgbjax1 .
+
+_:node1atmjgbjax1 km-dev:hasObjectMap km-dev:RefObjectMap_fcae092f-874a-4b40-8d82-47df2554b196 .
+
+km-dev:PredicateObjectMap_c72c88bf-c168-4358-a741-792719d46224 rr:objectMap km-dev:RefObjectMap_fcae092f-874a-4b40-8d82-47df2554b196 .
+
+km-dev:TriplesMap_ff81b86f-a873-4d4c-9e13-66c13f011a41 rr:predicateObjectMap km-dev:PredicateObjectMap_c72c88bf-c168-4358-a741-792719d46224 .
+
+km-dev:PredicateObjectMap_c72c88bf-c168-4358-a741-792719d46224 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1atmjgbjax1 .
+
+_:node1atmjgbjax1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_c72c88bf-c168-4358-a741-792719d46224 .
+
+km-dev:PredicateObjectMap_25448534-c8e4-4cc7-8d43-aadf4fbe7e00 rr:predicate crm:P78_is_identified_by .
+
+km-dev:RefObjectMap_acd76161-876c-4c96-af55-245401c7c1c4 a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_9462393a-05fe-4a6a-8dee-9ad028a4413e ;
+	km-dev:isPartOfMapping _:node1atmjgbjax1 .
+
+_:node1atmjgbjax1 km-dev:hasObjectMap km-dev:RefObjectMap_acd76161-876c-4c96-af55-245401c7c1c4 .
+
+km-dev:PredicateObjectMap_25448534-c8e4-4cc7-8d43-aadf4fbe7e00 rr:objectMap km-dev:RefObjectMap_acd76161-876c-4c96-af55-245401c7c1c4 .
+
+km-dev:TriplesMap_ff81b86f-a873-4d4c-9e13-66c13f011a41 rr:predicateObjectMap km-dev:PredicateObjectMap_25448534-c8e4-4cc7-8d43-aadf4fbe7e00 .
+
+km-dev:PredicateObjectMap_25448534-c8e4-4cc7-8d43-aadf4fbe7e00 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1atmjgbjax1 .
+
+_:node1atmjgbjax1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_25448534-c8e4-4cc7-8d43-aadf4fbe7e00 .
+
+km-dev:PredicateObjectMap_11f6f833-6ee1-4fd8-8e6a-1fa83a787e1f rr:predicate crm:P98i_was_born .
+
+km-dev:RefObjectMap_b53c9f22-1d5c-45f2-a304-00329e1a640d a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_5fc3accb-3227-472e-a38b-49a51fa5c84a ;
+	km-dev:isPartOfMapping _:node1atmjgbjax1 .
+
+_:node1atmjgbjax1 km-dev:hasObjectMap km-dev:RefObjectMap_b53c9f22-1d5c-45f2-a304-00329e1a640d .
+
+km-dev:PredicateObjectMap_11f6f833-6ee1-4fd8-8e6a-1fa83a787e1f rr:objectMap km-dev:RefObjectMap_b53c9f22-1d5c-45f2-a304-00329e1a640d .
+
+km-dev:TriplesMap_ff81b86f-a873-4d4c-9e13-66c13f011a41 rr:predicateObjectMap km-dev:PredicateObjectMap_11f6f833-6ee1-4fd8-8e6a-1fa83a787e1f .
+
+km-dev:PredicateObjectMap_11f6f833-6ee1-4fd8-8e6a-1fa83a787e1f a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1atmjgbjax1 .
+
+_:node1atmjgbjax1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_11f6f833-6ee1-4fd8-8e6a-1fa83a787e1f .
+
+km-dev:PredicateObjectMap_ff159bab-47f4-4221-905b-d446422246b6 rr:predicate crm:P100i_died_in .
+
+km-dev:RefObjectMap_beb0b406-bbb2-41f6-89b8-f43e2a0c419d a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_f11938a6-f71d-41a2-ae10-638c7584344c ;
+	km-dev:isPartOfMapping _:node1atmjgbjax1 .
+
+_:node1atmjgbjax1 km-dev:hasObjectMap km-dev:RefObjectMap_beb0b406-bbb2-41f6-89b8-f43e2a0c419d .
+
+km-dev:PredicateObjectMap_ff159bab-47f4-4221-905b-d446422246b6 rr:objectMap km-dev:RefObjectMap_beb0b406-bbb2-41f6-89b8-f43e2a0c419d .
+
+km-dev:TriplesMap_ff81b86f-a873-4d4c-9e13-66c13f011a41 rr:predicateObjectMap km-dev:PredicateObjectMap_ff159bab-47f4-4221-905b-d446422246b6 .
+
+km-dev:PredicateObjectMap_ff159bab-47f4-4221-905b-d446422246b6 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1atmjgbjax1 .
+
+_:node1atmjgbjax1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_ff159bab-47f4-4221-905b-d446422246b6 .
+
+km-dev:PredicateObjectMap_419f9e87-030f-4829-bce0-cbb61a36f869 rr:predicate crm:P107i_is_current_or_former_member_of .
+
+km-dev:RefObjectMap_a9fdb575-41ec-446c-b80e-51597e498d88 a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_0e448f22-15e6-4314-a8f2-1386e894dde4 ;
+	km-dev:isPartOfMapping _:node1atmjgbjax1 .
+
+_:node1atmjgbjax1 km-dev:hasObjectMap km-dev:RefObjectMap_a9fdb575-41ec-446c-b80e-51597e498d88 .
+
+km-dev:PredicateObjectMap_419f9e87-030f-4829-bce0-cbb61a36f869 rr:objectMap km-dev:RefObjectMap_a9fdb575-41ec-446c-b80e-51597e498d88 .
+
+km-dev:TriplesMap_ff81b86f-a873-4d4c-9e13-66c13f011a41 rr:predicateObjectMap km-dev:PredicateObjectMap_419f9e87-030f-4829-bce0-cbb61a36f869 .
+
+km-dev:PredicateObjectMap_419f9e87-030f-4829-bce0-cbb61a36f869 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1atmjgbjax1 .
+
+_:node1atmjgbjax1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_419f9e87-030f-4829-bce0-cbb61a36f869 .
+
+km-dev:PredicateObjectMap_3878ebd8-c35c-4b4e-9dd6-432654dabd7a rr:predicate crm:P1_is_identified_by .
+
+km-dev:RefObjectMap_c7addc16-01bc-4b7b-a727-c828857d06fd a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_12b470d0-790b-4606-a14e-501495add512 ;
+	km-dev:isPartOfMapping _:node1atmjgbjax1 .
+
+_:node1atmjgbjax1 km-dev:hasObjectMap km-dev:RefObjectMap_c7addc16-01bc-4b7b-a727-c828857d06fd .
+
+km-dev:PredicateObjectMap_3878ebd8-c35c-4b4e-9dd6-432654dabd7a rr:objectMap km-dev:RefObjectMap_c7addc16-01bc-4b7b-a727-c828857d06fd .
+
+km-dev:TriplesMap_ff81b86f-a873-4d4c-9e13-66c13f011a41 rr:predicateObjectMap km-dev:PredicateObjectMap_3878ebd8-c35c-4b4e-9dd6-432654dabd7a .
+
+km-dev:PredicateObjectMap_3878ebd8-c35c-4b4e-9dd6-432654dabd7a a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1atmjgbjax1 .
+
+_:node1atmjgbjax1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_3878ebd8-c35c-4b4e-9dd6-432654dabd7a .
+
+km-dev:TriplesMap_d3604939-e330-4e78-970e-60e7be387318 a rr:TriplesMap .
+
+_:node1atmjgbjax1 km-dev:hasTriplesMap km-dev:TriplesMap_d3604939-e330-4e78-970e-60e7be387318 .
+
+km-dev:TriplesMap_d3604939-e330-4e78-970e-60e7be387318 km-dev:isPartOfMapping _:node1atmjgbjax1 .
+
+_:node1atmjgbjax4 rr:tableName "AutryMakers_new_Sheet1" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1atmjgbjax1 .
+
+_:node1atmjgbjax1 km-dev:hasLogicalTable _:node1atmjgbjax4 .
+
+km-dev:TriplesMap_d3604939-e330-4e78-970e-60e7be387318 rr:logicalTable _:node1atmjgbjax4 ;
+	rr:subjectMap _:node1atmjgbjax5 .
+
+_:node1atmjgbjax1 km-dev:hasSubjectMap _:node1atmjgbjax5 .
+
+_:node1atmjgbjax5 km-dev:isPartOfMapping _:node1atmjgbjax1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://www.cidoc-crm.org/cidoc-crm/E41_Appellation1" ;
+	rr:class crm:E41_Appellation ;
+	rr:termType rr:BlankNode ;
+	km-dev:namePrefix "crm:E41_Appellation1" .
+
+km-dev:PredicateObjectMap_20b332ed-9961-48f3-ad1f-f759d03117ea rr:predicate rdfs:label .
+
+_:node1atmjgbjax6 rr:column "Maker" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1atmjgbjax1 .
+
+_:node1atmjgbjax1 km-dev:hasObjectMap _:node1atmjgbjax6 .
+
+km-dev:PredicateObjectMap_20b332ed-9961-48f3-ad1f-f759d03117ea rr:objectMap _:node1atmjgbjax6 .
+
+km-dev:TriplesMap_d3604939-e330-4e78-970e-60e7be387318 rr:predicateObjectMap km-dev:PredicateObjectMap_20b332ed-9961-48f3-ad1f-f759d03117ea .
+
+km-dev:PredicateObjectMap_20b332ed-9961-48f3-ad1f-f759d03117ea a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1atmjgbjax1 .
+
+_:node1atmjgbjax1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_20b332ed-9961-48f3-ad1f-f759d03117ea .
+
+km-dev:TriplesMap_66461416-09fe-4828-b164-ac0a1b922cb5 a rr:TriplesMap .
+
+_:node1atmjgbjax1 km-dev:hasTriplesMap km-dev:TriplesMap_66461416-09fe-4828-b164-ac0a1b922cb5 .
+
+km-dev:TriplesMap_66461416-09fe-4828-b164-ac0a1b922cb5 km-dev:isPartOfMapping _:node1atmjgbjax1 .
+
+_:node1atmjgbjax7 rr:tableName "AutryMakers_new_Sheet1" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1atmjgbjax1 .
+
+_:node1atmjgbjax1 km-dev:hasLogicalTable _:node1atmjgbjax7 .
+
+km-dev:TriplesMap_66461416-09fe-4828-b164-ac0a1b922cb5 rr:logicalTable _:node1atmjgbjax7 ;
+	rr:subjectMap _:node1atmjgbjax8 .
+
+_:node1atmjgbjax1 km-dev:hasSubjectMap _:node1atmjgbjax8 .
+
+_:node1atmjgbjax8 km-dev:isPartOfMapping _:node1atmjgbjax1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://www.cidoc-crm.org/cidoc-crm/E42_Identifier2" ;
+	rr:class crm:E42_Identifier ;
+	rr:template "{AutryMakerURL}" .
+
+km-dev:TriplesMap_c8bf3a3e-17e4-4bab-9c35-1167060ba437 a rr:TriplesMap .
+
+_:node1atmjgbjax1 km-dev:hasTriplesMap km-dev:TriplesMap_c8bf3a3e-17e4-4bab-9c35-1167060ba437 .
+
+km-dev:TriplesMap_c8bf3a3e-17e4-4bab-9c35-1167060ba437 km-dev:isPartOfMapping _:node1atmjgbjax1 .
+
+_:node1atmjgbjax9 rr:tableName "AutryMakers_new_Sheet1" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1atmjgbjax1 .
+
+_:node1atmjgbjax1 km-dev:hasLogicalTable _:node1atmjgbjax9 .
+
+km-dev:TriplesMap_c8bf3a3e-17e4-4bab-9c35-1167060ba437 rr:logicalTable _:node1atmjgbjax9 ;
+	rr:subjectMap _:node1atmjgbjax10 .
+
+_:node1atmjgbjax1 km-dev:hasSubjectMap _:node1atmjgbjax10 .
+
+_:node1atmjgbjax10 km-dev:isPartOfMapping _:node1atmjgbjax1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://www.cidoc-crm.org/cidoc-crm/E50_Date1" ;
+	rr:class crm:E50_Date ;
+	rr:template "{DeathDate}" .
+
+km-dev:TriplesMap_9462393a-05fe-4a6a-8dee-9ad028a4413e a rr:TriplesMap .
+
+_:node1atmjgbjax1 km-dev:hasTriplesMap km-dev:TriplesMap_9462393a-05fe-4a6a-8dee-9ad028a4413e .
+
+km-dev:TriplesMap_9462393a-05fe-4a6a-8dee-9ad028a4413e km-dev:isPartOfMapping _:node1atmjgbjax1 .
+
+_:node1atmjgbjax11 rr:tableName "AutryMakers_new_Sheet1" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1atmjgbjax1 .
+
+_:node1atmjgbjax1 km-dev:hasLogicalTable _:node1atmjgbjax11 .
+
+km-dev:TriplesMap_9462393a-05fe-4a6a-8dee-9ad028a4413e rr:logicalTable _:node1atmjgbjax11 ;
+	rr:subjectMap _:node1atmjgbjax12 .
+
+_:node1atmjgbjax1 km-dev:hasSubjectMap _:node1atmjgbjax12 .
+
+_:node1atmjgbjax12 km-dev:isPartOfMapping _:node1atmjgbjax1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://www.cidoc-crm.org/cidoc-crm/E50_Date2" ;
+	rr:class crm:E50_Date ;
+	rr:template "{ObjectURI}/birth_date" .
+
+km-dev:TriplesMap_5fc3accb-3227-472e-a38b-49a51fa5c84a a rr:TriplesMap .
+
+_:node1atmjgbjax1 km-dev:hasTriplesMap km-dev:TriplesMap_5fc3accb-3227-472e-a38b-49a51fa5c84a .
+
+km-dev:TriplesMap_5fc3accb-3227-472e-a38b-49a51fa5c84a km-dev:isPartOfMapping _:node1atmjgbjax1 .
+
+_:node1atmjgbjax13 rr:tableName "AutryMakers_new_Sheet1" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1atmjgbjax1 .
+
+_:node1atmjgbjax1 km-dev:hasLogicalTable _:node1atmjgbjax13 .
+
+km-dev:TriplesMap_5fc3accb-3227-472e-a38b-49a51fa5c84a rr:logicalTable _:node1atmjgbjax13 ;
+	rr:subjectMap _:node1atmjgbjax14 .
+
+_:node1atmjgbjax1 km-dev:hasSubjectMap _:node1atmjgbjax14 .
+
+_:node1atmjgbjax14 km-dev:isPartOfMapping _:node1atmjgbjax1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://www.cidoc-crm.org/cidoc-crm/E67_Birth2" ;
+	rr:class crm:E67_Birth ;
+	rr:termType rr:BlankNode ;
+	km-dev:namePrefix "crm:E67_Birth2" .
+
+km-dev:PredicateObjectMap_e333a24b-a88d-407a-838d-e2965b7828e9 rr:predicate crm:P4_has_time-span .
+
+km-dev:RefObjectMap_8db9733a-1326-4186-ad84-363612902623 a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_bab6ed38-55ed-4d89-be3a-c1a896194acd ;
+	km-dev:isPartOfMapping _:node1atmjgbjax1 .
+
+_:node1atmjgbjax1 km-dev:hasObjectMap km-dev:RefObjectMap_8db9733a-1326-4186-ad84-363612902623 .
+
+km-dev:PredicateObjectMap_e333a24b-a88d-407a-838d-e2965b7828e9 rr:objectMap km-dev:RefObjectMap_8db9733a-1326-4186-ad84-363612902623 .
+
+km-dev:TriplesMap_5fc3accb-3227-472e-a38b-49a51fa5c84a rr:predicateObjectMap km-dev:PredicateObjectMap_e333a24b-a88d-407a-838d-e2965b7828e9 .
+
+km-dev:PredicateObjectMap_e333a24b-a88d-407a-838d-e2965b7828e9 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1atmjgbjax1 .
+
+_:node1atmjgbjax1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_e333a24b-a88d-407a-838d-e2965b7828e9 .
+
+km-dev:TriplesMap_f11938a6-f71d-41a2-ae10-638c7584344c a rr:TriplesMap .
+
+_:node1atmjgbjax1 km-dev:hasTriplesMap km-dev:TriplesMap_f11938a6-f71d-41a2-ae10-638c7584344c .
+
+km-dev:TriplesMap_f11938a6-f71d-41a2-ae10-638c7584344c km-dev:isPartOfMapping _:node1atmjgbjax1 .
+
+_:node1atmjgbjax15 rr:tableName "AutryMakers_new_Sheet1" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1atmjgbjax1 .
+
+_:node1atmjgbjax1 km-dev:hasLogicalTable _:node1atmjgbjax15 .
+
+km-dev:TriplesMap_f11938a6-f71d-41a2-ae10-638c7584344c rr:logicalTable _:node1atmjgbjax15 ;
+	rr:subjectMap _:node1atmjgbjax16 .
+
+_:node1atmjgbjax1 km-dev:hasSubjectMap _:node1atmjgbjax16 .
+
+_:node1atmjgbjax16 km-dev:isPartOfMapping _:node1atmjgbjax1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://www.cidoc-crm.org/cidoc-crm/E69_Death1" ;
+	rr:class crm:E69_Death ;
+	rr:termType rr:BlankNode ;
+	km-dev:namePrefix "crm:E69_Death1" .
+
+km-dev:PredicateObjectMap_b0f05c6e-a952-4945-9798-87c829563840 rr:predicate crm:P4_has_time-span .
+
+km-dev:RefObjectMap_8f38f744-1b52-46c7-8069-e8d3cc66c03e a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_fdf61ea1-c16b-4913-9f02-49a025da48c3 ;
+	km-dev:isPartOfMapping _:node1atmjgbjax1 .
+
+_:node1atmjgbjax1 km-dev:hasObjectMap km-dev:RefObjectMap_8f38f744-1b52-46c7-8069-e8d3cc66c03e .
+
+km-dev:PredicateObjectMap_b0f05c6e-a952-4945-9798-87c829563840 rr:objectMap km-dev:RefObjectMap_8f38f744-1b52-46c7-8069-e8d3cc66c03e .
+
+km-dev:TriplesMap_f11938a6-f71d-41a2-ae10-638c7584344c rr:predicateObjectMap km-dev:PredicateObjectMap_b0f05c6e-a952-4945-9798-87c829563840 .
+
+km-dev:PredicateObjectMap_b0f05c6e-a952-4945-9798-87c829563840 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1atmjgbjax1 .
+
+_:node1atmjgbjax1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_b0f05c6e-a952-4945-9798-87c829563840 .
+
+km-dev:TriplesMap_0e448f22-15e6-4314-a8f2-1386e894dde4 a rr:TriplesMap .
+
+_:node1atmjgbjax1 km-dev:hasTriplesMap km-dev:TriplesMap_0e448f22-15e6-4314-a8f2-1386e894dde4 .
+
+km-dev:TriplesMap_0e448f22-15e6-4314-a8f2-1386e894dde4 km-dev:isPartOfMapping _:node1atmjgbjax1 .
+
+_:node1atmjgbjax17 rr:tableName "AutryMakers_new_Sheet1" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1atmjgbjax1 .
+
+_:node1atmjgbjax1 km-dev:hasLogicalTable _:node1atmjgbjax17 .
+
+km-dev:TriplesMap_0e448f22-15e6-4314-a8f2-1386e894dde4 rr:logicalTable _:node1atmjgbjax17 ;
+	rr:subjectMap _:node1atmjgbjax18 .
+
+_:node1atmjgbjax1 km-dev:hasSubjectMap _:node1atmjgbjax18 .
+
+_:node1atmjgbjax18 km-dev:isPartOfMapping _:node1atmjgbjax1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://www.cidoc-crm.org/cidoc-crm/E74_Group1" ;
+	rr:class crm:E74_Group ;
+	rr:template "{NationalityURI}" .
+
+km-dev:PredicateObjectMap_67892c6f-6278-45e8-84ba-204a52394c83 rr:predicate rdfs:label .
+
+_:node1atmjgbjax19 rr:column "Nationality" ;
+	a rr:ObjectMap ;
+	rr:language "null" ;
+	km-dev:isPartOfMapping _:node1atmjgbjax1 .
+
+_:node1atmjgbjax1 km-dev:hasObjectMap _:node1atmjgbjax19 .
+
+km-dev:PredicateObjectMap_67892c6f-6278-45e8-84ba-204a52394c83 rr:objectMap _:node1atmjgbjax19 .
+
+km-dev:TriplesMap_0e448f22-15e6-4314-a8f2-1386e894dde4 rr:predicateObjectMap km-dev:PredicateObjectMap_67892c6f-6278-45e8-84ba-204a52394c83 .
+
+km-dev:PredicateObjectMap_67892c6f-6278-45e8-84ba-204a52394c83 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1atmjgbjax1 .
+
+_:node1atmjgbjax1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_67892c6f-6278-45e8-84ba-204a52394c83 .
+
+km-dev:TriplesMap_12b470d0-790b-4606-a14e-501495add512 a rr:TriplesMap .
+
+_:node1atmjgbjax1 km-dev:hasTriplesMap km-dev:TriplesMap_12b470d0-790b-4606-a14e-501495add512 .
+
+km-dev:TriplesMap_12b470d0-790b-4606-a14e-501495add512 km-dev:isPartOfMapping _:node1atmjgbjax1 .
+
+_:node1atmjgbjax20 rr:tableName "AutryMakers_new_Sheet1" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1atmjgbjax1 .
+
+_:node1atmjgbjax1 km-dev:hasLogicalTable _:node1atmjgbjax20 .
+
+km-dev:TriplesMap_12b470d0-790b-4606-a14e-501495add512 rr:logicalTable _:node1atmjgbjax20 ;
+	rr:subjectMap _:node1atmjgbjax21 .
+
+_:node1atmjgbjax1 km-dev:hasSubjectMap _:node1atmjgbjax21 .
+
+_:node1atmjgbjax21 km-dev:isPartOfMapping _:node1atmjgbjax1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://www.cidoc-crm.org/cidoc-crm/E82_Actor_Appellation1" ;
+	rr:class crm:E82_Actor_Appellation ;
+	rr:termType rr:BlankNode ;
+	km-dev:namePrefix "crm:E82_Actor_Appellation1" .
+
+km-dev:PredicateObjectMap_1fb834e0-8fcd-45a8-861e-f6b0732ae0d2 rr:predicate rdfs:label .
+
+_:node1atmjgbjax22 rr:column "ULAN_ID" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1atmjgbjax1 .
+
+_:node1atmjgbjax1 km-dev:hasObjectMap _:node1atmjgbjax22 .
+
+km-dev:PredicateObjectMap_1fb834e0-8fcd-45a8-861e-f6b0732ae0d2 rr:objectMap _:node1atmjgbjax22 .
+
+km-dev:TriplesMap_12b470d0-790b-4606-a14e-501495add512 rr:predicateObjectMap km-dev:PredicateObjectMap_1fb834e0-8fcd-45a8-861e-f6b0732ae0d2 .
+
+km-dev:PredicateObjectMap_1fb834e0-8fcd-45a8-861e-f6b0732ae0d2 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1atmjgbjax1 .
+
+_:node1atmjgbjax1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_1fb834e0-8fcd-45a8-861e-f6b0732ae0d2 .
+
+km-dev:TriplesMap_3c57886e-2be2-40f3-80f2-21ef552fb3de a rr:TriplesMap .
+
+_:node1atmjgbjax1 km-dev:hasTriplesMap km-dev:TriplesMap_3c57886e-2be2-40f3-80f2-21ef552fb3de .
+
+km-dev:TriplesMap_3c57886e-2be2-40f3-80f2-21ef552fb3de km-dev:isPartOfMapping _:node1atmjgbjax1 .
+
+_:node1atmjgbjax23 rr:tableName "AutryMakers_new_Sheet1" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1atmjgbjax1 .
+
+_:node1atmjgbjax1 km-dev:hasLogicalTable _:node1atmjgbjax23 .
+
+km-dev:TriplesMap_3c57886e-2be2-40f3-80f2-21ef552fb3de rr:logicalTable _:node1atmjgbjax23 ;
+	rr:subjectMap _:node1atmjgbjax24 .
+
+_:node1atmjgbjax1 km-dev:hasSubjectMap _:node1atmjgbjax24 .
+
+_:node1atmjgbjax24 km-dev:isPartOfMapping _:node1atmjgbjax1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object1" ;
+	rr:class crm:E22_Man-Made_Object ;
+	rr:template "object/{ObjectID}" ;
+	a km-dev:steinerTreeRootNode .
+
+km-dev:PredicateObjectMap_1a440a8a-ccb8-44da-aa2b-553fb0d25c4e rr:predicate crm:P108i_was_produced_by .
+
+km-dev:RefObjectMap_9ab8b0f3-eff5-4743-b4bb-7a097df010ad a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_9c7535a3-8fff-40b2-a9c2-76192be61bbc ;
+	km-dev:isPartOfMapping _:node1atmjgbjax1 .
+
+_:node1atmjgbjax1 km-dev:hasObjectMap km-dev:RefObjectMap_9ab8b0f3-eff5-4743-b4bb-7a097df010ad .
+
+km-dev:PredicateObjectMap_1a440a8a-ccb8-44da-aa2b-553fb0d25c4e rr:objectMap km-dev:RefObjectMap_9ab8b0f3-eff5-4743-b4bb-7a097df010ad .
+
+km-dev:TriplesMap_3c57886e-2be2-40f3-80f2-21ef552fb3de rr:predicateObjectMap km-dev:PredicateObjectMap_1a440a8a-ccb8-44da-aa2b-553fb0d25c4e .
+
+km-dev:PredicateObjectMap_1a440a8a-ccb8-44da-aa2b-553fb0d25c4e a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1atmjgbjax1 .
+
+_:node1atmjgbjax1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_1a440a8a-ccb8-44da-aa2b-553fb0d25c4e .
+
+km-dev:PredicateObjectMap_88ff58eb-61d6-4d76-9752-53b69319c4e4 rr:predicate crm:P67i_is_referred_to_by .
+
+km-dev:RefObjectMap_1d44f9a1-2620-4e42-a3dc-8f9ea3464889 a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_a4bd84cb-8799-455d-9ce4-8ede0f770ace ;
+	km-dev:isPartOfMapping _:node1atmjgbjax1 .
+
+_:node1atmjgbjax1 km-dev:hasObjectMap km-dev:RefObjectMap_1d44f9a1-2620-4e42-a3dc-8f9ea3464889 .
+
+km-dev:PredicateObjectMap_88ff58eb-61d6-4d76-9752-53b69319c4e4 rr:objectMap km-dev:RefObjectMap_1d44f9a1-2620-4e42-a3dc-8f9ea3464889 .
+
+km-dev:TriplesMap_3c57886e-2be2-40f3-80f2-21ef552fb3de rr:predicateObjectMap km-dev:PredicateObjectMap_88ff58eb-61d6-4d76-9752-53b69319c4e4 .
+
+km-dev:PredicateObjectMap_88ff58eb-61d6-4d76-9752-53b69319c4e4 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1atmjgbjax1 .
+
+_:node1atmjgbjax1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_88ff58eb-61d6-4d76-9752-53b69319c4e4 .
+
+km-dev:TriplesMap_9c7535a3-8fff-40b2-a9c2-76192be61bbc a rr:TriplesMap .
+
+_:node1atmjgbjax1 km-dev:hasTriplesMap km-dev:TriplesMap_9c7535a3-8fff-40b2-a9c2-76192be61bbc .
+
+km-dev:TriplesMap_9c7535a3-8fff-40b2-a9c2-76192be61bbc km-dev:isPartOfMapping _:node1atmjgbjax1 .
+
+_:node1atmjgbjax25 rr:tableName "AutryMakers_new_Sheet1" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1atmjgbjax1 .
+
+_:node1atmjgbjax1 km-dev:hasLogicalTable _:node1atmjgbjax25 .
+
+km-dev:TriplesMap_9c7535a3-8fff-40b2-a9c2-76192be61bbc rr:logicalTable _:node1atmjgbjax25 ;
+	rr:subjectMap _:node1atmjgbjax26 .
+
+_:node1atmjgbjax1 km-dev:hasSubjectMap _:node1atmjgbjax26 .
+
+_:node1atmjgbjax26 km-dev:isPartOfMapping _:node1atmjgbjax1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://www.cidoc-crm.org/cidoc-crm/E12_Production1" ;
+	rr:class crm:E12_Production ;
+	rr:termType rr:BlankNode ;
+	km-dev:namePrefix "crm:E12_Production1" .
+
+km-dev:PredicateObjectMap_0791d653-63b6-4b97-9af5-9a7bd8ab124c rr:predicate crm:P14_carried_out_by .
+
+km-dev:RefObjectMap_57b73ddd-9569-4164-9450-808efe830884 a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_ff81b86f-a873-4d4c-9e13-66c13f011a41 ;
+	km-dev:isPartOfMapping _:node1atmjgbjax1 .
+
+_:node1atmjgbjax1 km-dev:hasObjectMap km-dev:RefObjectMap_57b73ddd-9569-4164-9450-808efe830884 .
+
+km-dev:PredicateObjectMap_0791d653-63b6-4b97-9af5-9a7bd8ab124c rr:objectMap km-dev:RefObjectMap_57b73ddd-9569-4164-9450-808efe830884 .
+
+km-dev:TriplesMap_9c7535a3-8fff-40b2-a9c2-76192be61bbc rr:predicateObjectMap km-dev:PredicateObjectMap_0791d653-63b6-4b97-9af5-9a7bd8ab124c .
+
+km-dev:PredicateObjectMap_0791d653-63b6-4b97-9af5-9a7bd8ab124c a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1atmjgbjax1 .
+
+_:node1atmjgbjax1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_0791d653-63b6-4b97-9af5-9a7bd8ab124c .
+
+km-dev:TriplesMap_a4bd84cb-8799-455d-9ce4-8ede0f770ace a rr:TriplesMap .
+
+_:node1atmjgbjax1 km-dev:hasTriplesMap km-dev:TriplesMap_a4bd84cb-8799-455d-9ce4-8ede0f770ace .
+
+km-dev:TriplesMap_a4bd84cb-8799-455d-9ce4-8ede0f770ace km-dev:isPartOfMapping _:node1atmjgbjax1 .
+
+_:node1atmjgbjax27 rr:tableName "AutryMakers_new_Sheet1" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1atmjgbjax1 .
+
+_:node1atmjgbjax1 km-dev:hasLogicalTable _:node1atmjgbjax27 .
+
+km-dev:TriplesMap_a4bd84cb-8799-455d-9ce4-8ede0f770ace rr:logicalTable _:node1atmjgbjax27 ;
+	rr:subjectMap _:node1atmjgbjax28 .
+
+_:node1atmjgbjax1 km-dev:hasSubjectMap _:node1atmjgbjax28 .
+
+_:node1atmjgbjax28 km-dev:isPartOfMapping _:node1atmjgbjax1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object1" ;
+	rr:class crm:E33_Linguistic_Object ;
+	rr:termType rr:BlankNode ;
+	km-dev:namePrefix "crm:E33_Linguistic_Object1" .
+
+km-dev:PredicateObjectMap_34e0cdb6-a384-4717-b75d-5b7fae0815bc rr:predicate crm:P129_is_about .
+
+km-dev:RefObjectMap_4fbb1723-d258-4318-9cca-75f6a8860951 a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_ff81b86f-a873-4d4c-9e13-66c13f011a41 ;
+	km-dev:isPartOfMapping _:node1atmjgbjax1 .
+
+_:node1atmjgbjax1 km-dev:hasObjectMap km-dev:RefObjectMap_4fbb1723-d258-4318-9cca-75f6a8860951 .
+
+km-dev:PredicateObjectMap_34e0cdb6-a384-4717-b75d-5b7fae0815bc rr:objectMap km-dev:RefObjectMap_4fbb1723-d258-4318-9cca-75f6a8860951 .
+
+km-dev:TriplesMap_a4bd84cb-8799-455d-9ce4-8ede0f770ace rr:predicateObjectMap km-dev:PredicateObjectMap_34e0cdb6-a384-4717-b75d-5b7fae0815bc .
+
+km-dev:PredicateObjectMap_34e0cdb6-a384-4717-b75d-5b7fae0815bc a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1atmjgbjax1 .
+
+_:node1atmjgbjax1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_34e0cdb6-a384-4717-b75d-5b7fae0815bc .
+
+km-dev:TriplesMap_bab6ed38-55ed-4d89-be3a-c1a896194acd a rr:TriplesMap .
+
+_:node1atmjgbjax1 km-dev:hasTriplesMap km-dev:TriplesMap_bab6ed38-55ed-4d89-be3a-c1a896194acd .
+
+km-dev:TriplesMap_bab6ed38-55ed-4d89-be3a-c1a896194acd km-dev:isPartOfMapping _:node1atmjgbjax1 .
+
+_:node1atmjgbjax29 rr:tableName "AutryMakers_new_Sheet1" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1atmjgbjax1 .
+
+_:node1atmjgbjax1 km-dev:hasLogicalTable _:node1atmjgbjax29 .
+
+km-dev:TriplesMap_bab6ed38-55ed-4d89-be3a-c1a896194acd rr:logicalTable _:node1atmjgbjax29 ;
+	rr:subjectMap _:node1atmjgbjax30 .
+
+_:node1atmjgbjax1 km-dev:hasSubjectMap _:node1atmjgbjax30 .
+
+_:node1atmjgbjax30 km-dev:isPartOfMapping _:node1atmjgbjax1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span1" ;
+	rr:class crm:E52_Time-Span ;
+	rr:termType rr:BlankNode ;
+	km-dev:namePrefix "crm:E52_Time-Span1" .
+
+km-dev:PredicateObjectMap_077175c9-51c0-4c2f-930e-702d19333026 rr:predicate crm:P82_at_some_time_within .
+
+_:node1atmjgbjax31 rr:column "BirthDate" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1atmjgbjax1 .
+
+_:node1atmjgbjax1 km-dev:hasObjectMap _:node1atmjgbjax31 .
+
+km-dev:PredicateObjectMap_077175c9-51c0-4c2f-930e-702d19333026 rr:objectMap _:node1atmjgbjax31 .
+
+km-dev:TriplesMap_bab6ed38-55ed-4d89-be3a-c1a896194acd rr:predicateObjectMap km-dev:PredicateObjectMap_077175c9-51c0-4c2f-930e-702d19333026 .
+
+km-dev:PredicateObjectMap_077175c9-51c0-4c2f-930e-702d19333026 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1atmjgbjax1 .
+
+_:node1atmjgbjax1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_077175c9-51c0-4c2f-930e-702d19333026 .
+
+km-dev:TriplesMap_fdf61ea1-c16b-4913-9f02-49a025da48c3 a rr:TriplesMap .
+
+_:node1atmjgbjax1 km-dev:hasTriplesMap km-dev:TriplesMap_fdf61ea1-c16b-4913-9f02-49a025da48c3 .
+
+km-dev:TriplesMap_fdf61ea1-c16b-4913-9f02-49a025da48c3 km-dev:isPartOfMapping _:node1atmjgbjax1 .
+
+_:node1atmjgbjax32 rr:tableName "AutryMakers_new_Sheet1" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1atmjgbjax1 .
+
+_:node1atmjgbjax1 km-dev:hasLogicalTable _:node1atmjgbjax32 .
+
+km-dev:TriplesMap_fdf61ea1-c16b-4913-9f02-49a025da48c3 rr:logicalTable _:node1atmjgbjax32 ;
+	rr:subjectMap _:node1atmjgbjax33 .
+
+_:node1atmjgbjax1 km-dev:hasSubjectMap _:node1atmjgbjax33 .
+
+_:node1atmjgbjax33 km-dev:isPartOfMapping _:node1atmjgbjax1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span2" ;
+	rr:class crm:E52_Time-Span ;
+	rr:termType rr:BlankNode ;
+	km-dev:namePrefix "crm:E52_Time-Span2" .
+
+km-dev:PredicateObjectMap_28f5bde8-9abe-45dd-835b-81fd22a02284 rr:predicate crm:P82_at_some_time_within .
+
+_:node1atmjgbjax34 rr:constant "{ObjectURI}/death_date" ;
+	rr:datatype "http://www.w3.org/2001/XMLSchema#string" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1atmjgbjax1 .
+
+_:node1atmjgbjax1 km-dev:hasObjectMap _:node1atmjgbjax34 .
+
+km-dev:PredicateObjectMap_28f5bde8-9abe-45dd-835b-81fd22a02284 rr:objectMap _:node1atmjgbjax34 .
+
+km-dev:TriplesMap_fdf61ea1-c16b-4913-9f02-49a025da48c3 rr:predicateObjectMap km-dev:PredicateObjectMap_28f5bde8-9abe-45dd-835b-81fd22a02284 .
+
+km-dev:PredicateObjectMap_28f5bde8-9abe-45dd-835b-81fd22a02284 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1atmjgbjax1 .
+
+_:node1atmjgbjax1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_28f5bde8-9abe-45dd-835b-81fd22a02284 .
