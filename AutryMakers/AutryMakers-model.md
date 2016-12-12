@@ -166,7 +166,7 @@ else:
 From column: _Nationality_
 ``` python
 if (getValue("Nationality") != "NULL") and (getValue("Nationality") != ''):
-    return "aat:300379842"
+    return "http://vocab.getty.edu/aat/300379842"
 else:
     return ''
 ```
