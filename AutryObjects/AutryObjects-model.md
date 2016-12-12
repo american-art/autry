@@ -84,7 +84,7 @@ else:
 From column: _DimensionsTextURI_
 ``` python
 if getValue("Measurements"):
-    return "aat:300266036"
+    return "http://vocab.getty.edu/aat/300266036"
 else:
     return ''
 ```
@@ -102,7 +102,7 @@ else:
 From column: _MediumTextURI_
 ``` python
 if getValue("Materials"):
-    return "aat:300264237"
+    return "http://vocab.getty.edu/aat/300264237"
 else:
     return ''
 ```
@@ -130,7 +130,7 @@ else:
 From column: _ClassificationEventURI_
 ``` python
 if getValue("ObjectName"):
-    return "aat:300179869"
+    return "http://vocab.getty.edu/aat/300179869"
 else:
     return ''
 ```
@@ -156,7 +156,7 @@ return UM.uri_from_fields("object/id/", getValue("ObjectID"))
 #### _RepositoryTermsURI_
 From column: _ObjectID_
 ``` python
-return "aat:300404621"
+return "http://vocab.getty.edu/aat/300404621"
 ```
 
 #### _TitleCopy_
@@ -229,8 +229,8 @@ return getValue("AutryObjectURL")
 | `crm:E22_Man-Made_Object1` | `crm:P52_has_current_owner` | `crm:E40_Legal_Body1`|
 | `crm:E22_Man-Made_Object1` | `crm:P1_is_identified_by` | `crm:E42_Identifier1`|
 | `crm:E22_Man-Made_Object1` | `crm:P1_is_identified_by` | `crm:E42_Identifier2`|
-| `crm:E22_Man-Made_Object1` | `foaf:homepage` | `foaf:Document2`|
 | `crm:E22_Man-Made_Object1` | `crm:P2_has_type` | `crm:E55_Type6`|
+| `crm:E22_Man-Made_Object1` | `foaf:homepage` | `foaf:Document2`|
 | `crm:E33_Linguistic_Object1` | `crm:P2_has_type` | `crm:E55_Type3`|
 | `crm:E33_Linguistic_Object2` | `crm:P2_has_type` | `crm:E55_Type4`|
 | `crm:E33_Linguistic_Object3` | `crm:P2_has_type` | `crm:E55_Type5`|
