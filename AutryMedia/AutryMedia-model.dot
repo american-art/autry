@@ -1,0 +1,33 @@
+digraph n0 {
+fontcolor="blue"
+remincross="true"
+label="AutryMedia_Sheet1"
+subgraph cluster {
+label="model"
+n2[style="filled",color="white",fillcolor="lightgray",label="E22_Man-Made_Object1"];
+n3[style="filled",color="white",fillcolor="lightgray",label="E38_Image1"];
+n4[style="filled",color="white",fillcolor="lightgray",label="E42_Identifier1"];
+n5[style="filled",color="white",fillcolor="lightgray",label="Document1"];
+n6[style="filled",color="white",fillcolor="lightgray",label="E55_Type1"];
+n7[shape="plaintext",style="filled",fillcolor="gold",label="imagelink"];
+n8[shape="plaintext",style="filled",fillcolor="gold",label="ObjectIDCopy"];
+n9[shape="plaintext",style="filled",fillcolor="gold",label="ObjectID"];
+n10[shape="plaintext",style="filled",fillcolor="gold",label="RepositoryTermsURI"];
+n11[shape="plaintext",style="filled",fillcolor="gold",label="AutryObjectURL"];
+n12[shape="plaintext",style="filled",fillcolor="gold",label="AutryObjectURLCopy"];
+n13[shape="plaintext",style="filled",fillcolor="gold",label="ObjectIDURI"];
+n14[shape="plaintext",style="filled",fillcolor="gold",label="ObjectURI"];
+}
+n2 -> n3[color="brown",fontcolor="black",label="P138i_has_representation"]
+n2 -> n4[color="brown",fontcolor="black",label="P1_is_identified_by"]
+n2 -> n5[color="brown",fontcolor="black",label="homepage"]
+n4 -> n6[color="brown",fontcolor="black",label="P2_has_type"]
+n3 -> n7[color="brown",fontcolor="black",label="classLink"]
+n4 -> n8[color="brown",fontcolor="black",label="value"]
+n4 -> n9[color="brown",fontcolor="black",label="label"]
+n6 -> n10[color="brown",fontcolor="black",label="classLink"]
+n5 -> n11[color="brown",fontcolor="black",label="classLink"]
+n5 -> n12[color="brown",fontcolor="black",label="label"]
+n4 -> n13[color="brown",fontcolor="black",label="classLink"]
+n2 -> n14[color="brown",fontcolor="black",label="classLink"]
+}
