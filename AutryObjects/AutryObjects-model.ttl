@@ -580,58 +580,6 @@ _:node1b3vemkiex1 a km-dev:R2RMLMapping ;
         \"tags\": [\"Transformation\"]
     },
     {
-        \"commandName\": \"SubmitPythonTransformationCommand\",
-        \"model\": \"new\",
-        \"inputParameters\": [
-            {
-                \"name\": \"hNodeId\",
-                \"type\": \"hNodeId\",
-                \"value\": [{\"columnName\": \"PreferredIDURI\"}]
-            },
-            {
-                \"name\": \"worksheetId\",
-                \"type\": \"worksheetId\",
-                \"value\": \"W\"
-            },
-            {
-                \"name\": \"selectionName\",
-                \"type\": \"other\",
-                \"value\": \"DEFAULT_TEST\"
-            },
-            {
-                \"name\": \"newColumnName\",
-                \"type\": \"other\",
-                \"value\": \"PreferredTermsURI\"
-            },
-            {
-                \"name\": \"transformationCode\",
-                \"type\": \"other\",
-                \"value\": \"if getValue(\\\"ObjectNumber\\\"):\\n    return \\\"aat:300404670\\\"\\nelse:\\n    return ''\"
-            },
-            {
-                \"name\": \"errorDefaultValue\",
-                \"type\": \"other\",
-                \"value\": \"\"
-            },
-            {
-                \"name\": \"isJSONOutput\",
-                \"type\": \"other\",
-                \"value\": \"false\"
-            },
-            {
-                \"name\": \"inputColumns\",
-                \"type\": \"hNodeIdList\",
-                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"ObjectNumber\\\"}]}]\"
-            },
-            {
-                \"name\": \"outputColumns\",
-                \"type\": \"hNodeIdList\",
-                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"PreferredTermsURI\\\"}]}]\"
-            }
-        ],
-        \"tags\": [\"Transformation\"]
-    },
-    {
         \"commandName\": \"SetWorksheetPropertiesCommand\",
         \"model\": \"new\",
         \"inputParameters\": [
@@ -717,58 +665,6 @@ _:node1b3vemkiex1 a km-dev:R2RMLMapping ;
                 \"name\": \"outputColumns\",
                 \"type\": \"hNodeIdList\",
                 \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"TitleURI\\\"}]}]\"
-            }
-        ],
-        \"tags\": [\"Transformation\"]
-    },
-    {
-        \"commandName\": \"SubmitPythonTransformationCommand\",
-        \"model\": \"new\",
-        \"inputParameters\": [
-            {
-                \"name\": \"hNodeId\",
-                \"type\": \"hNodeId\",
-                \"value\": [{\"columnName\": \"TitleURI\"}]
-            },
-            {
-                \"name\": \"worksheetId\",
-                \"type\": \"worksheetId\",
-                \"value\": \"W\"
-            },
-            {
-                \"name\": \"selectionName\",
-                \"type\": \"other\",
-                \"value\": \"DEFAULT_TEST\"
-            },
-            {
-                \"name\": \"newColumnName\",
-                \"type\": \"other\",
-                \"value\": \"TitlePreferredTermsURI\"
-            },
-            {
-                \"name\": \"transformationCode\",
-                \"type\": \"other\",
-                \"value\": \"if getValue(\\\"Title\\\"):\\n    return \\\"aat:300404670\\\"\\nelse:\\n    return ''\"
-            },
-            {
-                \"name\": \"errorDefaultValue\",
-                \"type\": \"other\",
-                \"value\": \"\"
-            },
-            {
-                \"name\": \"isJSONOutput\",
-                \"type\": \"other\",
-                \"value\": \"false\"
-            },
-            {
-                \"name\": \"inputColumns\",
-                \"type\": \"hNodeIdList\",
-                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Title\\\"}]}]\"
-            },
-            {
-                \"name\": \"outputColumns\",
-                \"type\": \"hNodeIdList\",
-                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"TitlePreferredTermsURI\\\"}]}]\"
             }
         ],
         \"tags\": [\"Transformation\"]
@@ -873,58 +769,6 @@ _:node1b3vemkiex1 a km-dev:R2RMLMapping ;
                 \"name\": \"outputColumns\",
                 \"type\": \"hNodeIdList\",
                 \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"CreditLineURI\\\"}]}]\"
-            }
-        ],
-        \"tags\": [\"Transformation\"]
-    },
-    {
-        \"commandName\": \"SubmitPythonTransformationCommand\",
-        \"model\": \"new\",
-        \"inputParameters\": [
-            {
-                \"name\": \"hNodeId\",
-                \"type\": \"hNodeId\",
-                \"value\": [{\"columnName\": \"CreditLineURI\"}]
-            },
-            {
-                \"name\": \"worksheetId\",
-                \"type\": \"worksheetId\",
-                \"value\": \"W\"
-            },
-            {
-                \"name\": \"selectionName\",
-                \"type\": \"other\",
-                \"value\": \"DEFAULT_TEST\"
-            },
-            {
-                \"name\": \"newColumnName\",
-                \"type\": \"other\",
-                \"value\": \"AcknowledgementsURI\"
-            },
-            {
-                \"name\": \"transformationCode\",
-                \"type\": \"other\",
-                \"value\": \"if getValue(\\\"CreditLine\\\"):\\n    return \\\"aat:300026687\\\"\\nelse:\\n    return ''\"
-            },
-            {
-                \"name\": \"errorDefaultValue\",
-                \"type\": \"other\",
-                \"value\": \"\"
-            },
-            {
-                \"name\": \"isJSONOutput\",
-                \"type\": \"other\",
-                \"value\": \"false\"
-            },
-            {
-                \"name\": \"inputColumns\",
-                \"type\": \"hNodeIdList\",
-                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"CreditLine\\\"}]}]\"
-            },
-            {
-                \"name\": \"outputColumns\",
-                \"type\": \"hNodeIdList\",
-                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"AcknowledgementsURI\\\"}]}]\"
             }
         ],
         \"tags\": [\"Transformation\"]

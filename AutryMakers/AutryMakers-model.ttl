@@ -282,58 +282,6 @@ _:node1b3ve4tmlx1 a km-dev:R2RMLMapping ;
         \"tags\": [\"Transformation\"]
     },
     {
-        \"commandName\": \"SubmitPythonTransformationCommand\",
-        \"model\": \"new\",
-        \"inputParameters\": [
-            {
-                \"name\": \"hNodeId\",
-                \"type\": \"hNodeId\",
-                \"value\": [{\"columnName\": \"MakerCopy\"}]
-            },
-            {
-                \"name\": \"worksheetId\",
-                \"type\": \"worksheetId\",
-                \"value\": \"W\"
-            },
-            {
-                \"name\": \"selectionName\",
-                \"type\": \"other\",
-                \"value\": \"DEFAULT_TEST\"
-            },
-            {
-                \"name\": \"newColumnName\",
-                \"type\": \"other\",
-                \"value\": \"PreferredTermsURI\"
-            },
-            {
-                \"name\": \"transformationCode\",
-                \"type\": \"other\",
-                \"value\": \"if getValue(\\\"Maker\\\"):\\n    return \\\"aat:300404670\\\"\\nelse:\\n    return ''\"
-            },
-            {
-                \"name\": \"errorDefaultValue\",
-                \"type\": \"other\",
-                \"value\": \"\"
-            },
-            {
-                \"name\": \"isJSONOutput\",
-                \"type\": \"other\",
-                \"value\": \"false\"
-            },
-            {
-                \"name\": \"inputColumns\",
-                \"type\": \"hNodeIdList\",
-                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Maker\\\"}]}]\"
-            },
-            {
-                \"name\": \"outputColumns\",
-                \"type\": \"hNodeIdList\",
-                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"PreferredTermsURI\\\"}]}]\"
-            }
-        ],
-        \"tags\": [\"Transformation\"]
-    },
-    {
         \"commandName\": \"SetWorksheetPropertiesCommand\",
         \"model\": \"new\",
         \"inputParameters\": [
