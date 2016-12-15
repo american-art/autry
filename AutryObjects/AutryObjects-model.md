@@ -3,6 +3,11 @@
 ## Add Column
 
 ## Add Node/Literal
+#### Literal Node: `http://vocab.getty.edu/aat/300179869`
+Literal Type: ``
+<br/>Language: ``
+<br/>isUri: `true`
+
 
 ## PyTransforms
 #### _ObjectURI_
@@ -21,7 +26,7 @@ return UM.uri_from_fields("object/preferred_id/", getValue("ObjectNumber"))
 From column: _PreferredIDURI_
 ``` python
 if getValue("ObjectNumber"):
-    return "aat:300404670"
+    return "http://vocab.getty.edu/aat/300404670"
 else:
     return ''
 ```
@@ -39,7 +44,7 @@ else:
 From column: _TitleURI_
 ``` python
 if getValue("Title"):
-    return "aat:300404670"
+    return "http://vocab.getty.edu/aat/300404670"
 else:
     return ''
 ```
@@ -66,7 +71,7 @@ else:
 From column: _CreditLineURI_
 ``` python
 if getValue("CreditLine"):
-    return "aat:300026687"
+    return "http://vocab.getty.edu/aat/300026687"
 else:
     return ''
 ```
@@ -214,13 +219,13 @@ return getValue("AutryObjectURL")
 | _TitleCopy_ | `rdf:value` | `crm:E35_Title1`|
 | _TitlePreferredTermsURI_ | `uri` | `crm:E55_Type2`|
 | _TitleURI_ | `uri` | `crm:E35_Title1`|
-| _VisualWorksURI_ | `crm:P21_had_general_purpose` | `crm:E17_Type_Assignment1`|
 
 
 ## Links
 | From | Property | To |
 |  --- | -------- | ---|
 | `crm:E17_Type_Assignment1` | `crm:P42_assigned` | `crm:E55_Type6`|
+| `crm:E17_Type_Assignment1` | `crm:P21_had_general_purpose` | `xsd:http://vocab.getty.edu/aat/300179869`|
 | `crm:E22_Man-Made_Object1` | `crm:P41i_was_classified_by` | `crm:E17_Type_Assignment1`|
 | `crm:E22_Man-Made_Object1` | `crm:P67i_is_referred_to_by` | `crm:E33_Linguistic_Object1`|
 | `crm:E22_Man-Made_Object1` | `crm:P67i_is_referred_to_by` | `crm:E33_Linguistic_Object2`|
