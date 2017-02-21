@@ -1,0 +1,25 @@
+digraph n0 {
+fontcolor="blue"
+remincross="true"
+label="AutryCultureMade.csv"
+subgraph cluster {
+label="model"
+n2[style="filled",color="white",fillcolor="lightgray",label="E12_Production1"];
+n3[style="filled",color="white",fillcolor="lightgray",label="E39_Actor1"];
+n4[style="filled",color="white",fillcolor="lightgray",label="E22_Man-Made_Object1"];
+n5[style="filled",color="white",fillcolor="lightgray",label="E74_Group1"];
+n6[shape="plaintext",style="filled",fillcolor="gold",label="CultureURI"];
+n7[shape="plaintext",style="filled",fillcolor="gold",label="ObjectURI"];
+n8[shape="plaintext",style="filled",fillcolor="gold",label="Culture"];
+n9[shape="plaintext",style="filled",fillcolor="gold",label="ProductionURI"];
+n10[shape="plaintext",style="filled",fillcolor="gold",label="ArtistURI"];
+}
+n2 -> n3[color="brown",fontcolor="black",label="P14_carried_out_by"]
+n4 -> n2[color="brown",fontcolor="black",label="P108i_was_produced_by"]
+n3 -> n5[color="brown",fontcolor="black",label="P107i_is_current_or_former_member_of"]
+n5 -> n6[color="brown",fontcolor="black",label="classLink"]
+n4 -> n7[color="brown",fontcolor="black",label="classLink"]
+n5 -> n8[color="brown",fontcolor="black",label="label"]
+n2 -> n9[color="brown",fontcolor="black",label="classLink"]
+n3 -> n10[color="brown",fontcolor="black",label="classLink"]
+}
