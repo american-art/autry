@@ -13,12 +13,12 @@
 @prefix rr: <http://www.w3.org/ns/r2rml#> .
 @prefix km-dev: <http://isi.edu/integration/karma/dev#> .
 
-_:node1b9g34vojx1 a km-dev:R2RMLMapping ;
+_:node1b9miee73x1 a km-dev:R2RMLMapping ;
 	km-dev:sourceName "AutryCultureMade.csv" ;
-	km-dev:modelPublicationTime "1487672606484"^^xsd:long ;
+	km-dev:modelPublicationTime "1487889971427"^^xsd:long ;
 	km-dev:modelVersion "1.7" ;
-	km-dev:hasInputColumns "[[{\"columnName\":\"Culture\"}]]" ;
-	km-dev:hasOutputColumns "[[{\"columnName\":\"CultureURI\"}],[{\"columnName\":\"ObjectURI\"}],[{\"columnName\":\"Culture\"}],[{\"columnName\":\"ProductionURI\"}],[{\"columnName\":\"ArtistURI\"}]]" ;
+	km-dev:hasInputColumns "[[{\"columnName\":\"ObjectID\"}],[{\"columnName\":\"Culture\"}]]" ;
+	km-dev:hasOutputColumns "[[{\"columnName\":\"ObjectURI\"}],[{\"columnName\":\"Culture\"}],[{\"columnName\":\"CultureURI\"}],[{\"columnName\":\"ProductionURI\"}],[{\"columnName\":\"ArtistURI\"}]]" ;
 	km-dev:hasModelLabel "AutryCultureMade" ;
 	km-dev:hasBaseURI "http://americanartcollaborative.org/autry/" ;
 	km-dev:hasWorksheetHistory """[
@@ -63,7 +63,7 @@ _:node1b9g34vojx1 a km-dev:R2RMLMapping ;
             },
             {
                 \"name\": \"inputColumns\",
-                \"value\": \"[]\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"ObjectID\\\"}]}]\",
                 \"type\": \"hNodeIdList\"
             },
             {
@@ -115,7 +115,7 @@ _:node1b9g34vojx1 a km-dev:R2RMLMapping ;
             },
             {
                 \"name\": \"inputColumns\",
-                \"value\": \"[]\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"ObjectURI\\\"}]}]\",
                 \"type\": \"hNodeIdList\"
             },
             {
@@ -152,7 +152,7 @@ _:node1b9g34vojx1 a km-dev:R2RMLMapping ;
             },
             {
                 \"name\": \"transformationCode\",
-                \"value\": \"return \\\"thesauri/culture/\\\"+ getValue(\\\"Culture\\\").replace(\\\" \\\",\\\"_\\\").split(\\\"?\\\")[0]\",
+                \"value\": \"return UM.uri_from_fields(\\\"thesauri/culture/\\\", getValue(\\\"Culture\\\"))\",
                 \"type\": \"other\"
             },
             {
@@ -167,7 +167,7 @@ _:node1b9g34vojx1 a km-dev:R2RMLMapping ;
             },
             {
                 \"name\": \"inputColumns\",
-                \"value\": \"[]\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Culture\\\"}]}]\",
                 \"type\": \"hNodeIdList\"
             },
             {
@@ -219,7 +219,7 @@ _:node1b9g34vojx1 a km-dev:R2RMLMapping ;
             },
             {
                 \"name\": \"inputColumns\",
-                \"value\": \"[]\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"ObjectURI\\\"}]}]\",
                 \"type\": \"hNodeIdList\"
             },
             {
@@ -309,7 +309,7 @@ _:node1b9g34vojx1 a km-dev:R2RMLMapping ;
             },
             {
                 \"name\": \"inputColumns\",
-                \"value\": \"[]\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"ObjectID\\\"}]}]\",
                 \"type\": \"hNodeIdList\"
             },
             {
@@ -361,7 +361,7 @@ _:node1b9g34vojx1 a km-dev:R2RMLMapping ;
             },
             {
                 \"name\": \"inputColumns\",
-                \"value\": \"[]\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Culture\\\"}]}]\",
                 \"type\": \"hNodeIdList\"
             },
             {
@@ -465,7 +465,7 @@ _:node1b9g34vojx1 a km-dev:R2RMLMapping ;
             },
             {
                 \"name\": \"inputColumns\",
-                \"value\": \"[]\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"ObjectURI\\\"}]}]\",
                 \"type\": \"hNodeIdList\"
             },
             {
@@ -555,7 +555,7 @@ _:node1b9g34vojx1 a km-dev:R2RMLMapping ;
             },
             {
                 \"name\": \"inputColumns\",
-                \"value\": \"[]\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"ObjectID\\\"}]}]\",
                 \"type\": \"hNodeIdList\"
             },
             {
@@ -607,7 +607,7 @@ _:node1b9g34vojx1 a km-dev:R2RMLMapping ;
             },
             {
                 \"name\": \"inputColumns\",
-                \"value\": \"[]\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"ObjectURI\\\"}]}]\",
                 \"type\": \"hNodeIdList\"
             },
             {
@@ -659,7 +659,7 @@ _:node1b9g34vojx1 a km-dev:R2RMLMapping ;
             },
             {
                 \"name\": \"inputColumns\",
-                \"value\": \"[]\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Culture\\\"}]}]\",
                 \"type\": \"hNodeIdList\"
             },
             {
@@ -711,7 +711,7 @@ _:node1b9g34vojx1 a km-dev:R2RMLMapping ;
             },
             {
                 \"name\": \"inputColumns\",
-                \"value\": \"[]\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"ObjectURI\\\"}]}]\",
                 \"type\": \"hNodeIdList\"
             },
             {
@@ -801,7 +801,7 @@ _:node1b9g34vojx1 a km-dev:R2RMLMapping ;
             },
             {
                 \"name\": \"inputColumns\",
-                \"value\": \"[]\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"ObjectID\\\"}]}]\",
                 \"type\": \"hNodeIdList\"
             },
             {
@@ -853,7 +853,7 @@ _:node1b9g34vojx1 a km-dev:R2RMLMapping ;
             },
             {
                 \"name\": \"inputColumns\",
-                \"value\": \"[]\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Culture\\\"}]}]\",
                 \"type\": \"hNodeIdList\"
             },
             {
@@ -905,7 +905,7 @@ _:node1b9g34vojx1 a km-dev:R2RMLMapping ;
             },
             {
                 \"name\": \"inputColumns\",
-                \"value\": \"[]\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"ObjectURI\\\"}]}]\",
                 \"type\": \"hNodeIdList\"
             },
             {
@@ -938,6 +938,123 @@ _:node1b9g34vojx1 a km-dev:R2RMLMapping ;
                     \"graphLabel\": \"\",
                     \"hasBaseURI\": true,
                     \"baseURI\": \"http://americanartcollaborative.org/autry/\"
+                },
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetWorksheetPropertiesCommand\"
+    },
+    {
+        \"tags\": [\"Transformation\"],
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"properties\",
+                \"value\": {
+                    \"hasServiceProperties\": false,
+                    \"hasPrefix\": false,
+                    \"graphLabel\": \"\",
+                    \"hasGithubURL\": true,
+                    \"GithubURL\": \"https://github.com/american-art/autry/tree/master/AutryCultureMade\",
+                    \"hasBaseURI\": false,
+                    \"baseURI\": \"\"
+                },
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetWorksheetPropertiesCommand\"
+    },
+    {
+        \"tags\": [\"Transformation\"],
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"properties\",
+                \"value\": {
+                    \"hasServiceProperties\": false,
+                    \"hasPrefix\": false,
+                    \"graphLabel\": \"\",
+                    \"hasGithubURL\": true,
+                    \"GithubURL\": \"https://github.com/american-art/autry/tree/master/AutryCultureMade\",
+                    \"hasBaseURI\": false,
+                    \"baseURI\": \"\"
+                },
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetWorksheetPropertiesCommand\"
+    },
+    {
+        \"tags\": [\"Transformation\"],
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"properties\",
+                \"value\": {
+                    \"hasServiceProperties\": false,
+                    \"hasPrefix\": false,
+                    \"graphLabel\": \"AutryCultureMade\",
+                    \"hasBaseURI\": false
                 },
                 \"type\": \"other\"
             },
@@ -1059,83 +1176,6 @@ _:node1b9g34vojx1 a km-dev:R2RMLMapping ;
             }
         ],
         \"commandName\": \"OrganizeColumnsCommand\"
-    },
-    {
-        \"tags\": [\"Transformation\"],
-        \"model\": \"new\",
-        \"inputParameters\": [
-            {
-                \"name\": \"worksheetId\",
-                \"value\": \"W\",
-                \"type\": \"worksheetId\"
-            },
-            {
-                \"name\": \"selectionName\",
-                \"value\": \"DEFAULT_TEST\",
-                \"type\": \"other\"
-            },
-            {
-                \"name\": \"properties\",
-                \"value\": {
-                    \"hasServiceProperties\": false,
-                    \"hasPrefix\": false,
-                    \"graphLabel\": \"\",
-                    \"hasGithubURL\": true,
-                    \"GithubURL\": \"https://github.com/american-art/autry/tree/master/AutryCultureMade\",
-                    \"hasBaseURI\": false,
-                    \"baseURI\": \"\"
-                },
-                \"type\": \"other\"
-            },
-            {
-                \"name\": \"inputColumns\",
-                \"value\": \"[]\",
-                \"type\": \"hNodeIdList\"
-            },
-            {
-                \"name\": \"outputColumns\",
-                \"value\": \"[]\",
-                \"type\": \"hNodeIdList\"
-            }
-        ],
-        \"commandName\": \"SetWorksheetPropertiesCommand\"
-    },
-    {
-        \"tags\": [\"Transformation\"],
-        \"model\": \"new\",
-        \"inputParameters\": [
-            {
-                \"name\": \"worksheetId\",
-                \"value\": \"W\",
-                \"type\": \"worksheetId\"
-            },
-            {
-                \"name\": \"selectionName\",
-                \"value\": \"DEFAULT_TEST\",
-                \"type\": \"other\"
-            },
-            {
-                \"name\": \"properties\",
-                \"value\": {
-                    \"hasServiceProperties\": false,
-                    \"hasPrefix\": false,
-                    \"graphLabel\": \"AutryCultureMade\",
-                    \"hasBaseURI\": false
-                },
-                \"type\": \"other\"
-            },
-            {
-                \"name\": \"inputColumns\",
-                \"value\": \"[]\",
-                \"type\": \"hNodeIdList\"
-            },
-            {
-                \"name\": \"outputColumns\",
-                \"value\": \"[]\",
-                \"type\": \"hNodeIdList\"
-            }
-        ],
-        \"commandName\": \"SetWorksheetPropertiesCommand\"
     },
     {
         \"tags\": [\"SemanticType\"],
@@ -3042,164 +3082,164 @@ _:node1b9g34vojx1 a km-dev:R2RMLMapping ;
     }
 ]""" .
 
-km-dev:TriplesMap_d6daad96-f148-4975-aabd-caa0f02faf92 a rr:TriplesMap .
+km-dev:TriplesMap_891cdbee-42cf-46d2-bc2a-9af34e59794b a rr:TriplesMap .
 
-_:node1b9g34vojx1 km-dev:hasTriplesMap km-dev:TriplesMap_d6daad96-f148-4975-aabd-caa0f02faf92 .
+_:node1b9miee73x1 km-dev:hasTriplesMap km-dev:TriplesMap_891cdbee-42cf-46d2-bc2a-9af34e59794b .
 
-km-dev:TriplesMap_d6daad96-f148-4975-aabd-caa0f02faf92 km-dev:isPartOfMapping _:node1b9g34vojx1 .
+km-dev:TriplesMap_891cdbee-42cf-46d2-bc2a-9af34e59794b km-dev:isPartOfMapping _:node1b9miee73x1 .
 
-_:node1b9g34vojx2 rr:tableName "AutryCultureMade.csv" ;
+_:node1b9miee73x2 rr:tableName "AutryCultureMade.csv" ;
 	a rr:LogicalTable ;
-	km-dev:isPartOfMapping _:node1b9g34vojx1 .
+	km-dev:isPartOfMapping _:node1b9miee73x1 .
 
-_:node1b9g34vojx1 km-dev:hasLogicalTable _:node1b9g34vojx2 .
+_:node1b9miee73x1 km-dev:hasLogicalTable _:node1b9miee73x2 .
 
-km-dev:TriplesMap_d6daad96-f148-4975-aabd-caa0f02faf92 rr:logicalTable _:node1b9g34vojx2 ;
-	rr:subjectMap _:node1b9g34vojx3 .
+km-dev:TriplesMap_891cdbee-42cf-46d2-bc2a-9af34e59794b rr:logicalTable _:node1b9miee73x2 ;
+	rr:subjectMap _:node1b9miee73x3 .
 
-_:node1b9g34vojx1 km-dev:hasSubjectMap _:node1b9g34vojx3 .
+_:node1b9miee73x1 km-dev:hasSubjectMap _:node1b9miee73x3 .
 
-_:node1b9g34vojx3 km-dev:isPartOfMapping _:node1b9g34vojx1 ;
+_:node1b9miee73x3 km-dev:isPartOfMapping _:node1b9miee73x1 ;
 	a rr:SubjectMap ;
 	km-dev:alignmentNodeId "http://www.cidoc-crm.org/cidoc-crm/E12_Production1" ;
 	rr:class crm:E12_Production ;
 	rr:template "{ObjectURI}/production" .
 
-km-dev:PredicateObjectMap_327ce23b-d1fa-49ad-8bd2-c917040cfcf6 rr:predicate crm:P14_carried_out_by .
+km-dev:PredicateObjectMap_1f2f2c24-5fa2-4dfc-8372-f054b7ef60b2 rr:predicate crm:P14_carried_out_by .
 
-km-dev:RefObjectMap_c2232836-4eeb-49de-8b1a-3e3b908f0ff2 a rr:RefObjectMap , rr:ObjectMap ;
-	rr:parentTriplesMap km-dev:TriplesMap_b1f5c7f6-f714-46cf-ac11-87b70631d5b1 ;
-	km-dev:isPartOfMapping _:node1b9g34vojx1 .
+km-dev:RefObjectMap_4c9d5d88-2bba-4d7c-86cc-8e44911d7280 a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_27cf539a-b798-49d1-9d97-41ff432259fc ;
+	km-dev:isPartOfMapping _:node1b9miee73x1 .
 
-_:node1b9g34vojx1 km-dev:hasObjectMap km-dev:RefObjectMap_c2232836-4eeb-49de-8b1a-3e3b908f0ff2 .
+_:node1b9miee73x1 km-dev:hasObjectMap km-dev:RefObjectMap_4c9d5d88-2bba-4d7c-86cc-8e44911d7280 .
 
-km-dev:PredicateObjectMap_327ce23b-d1fa-49ad-8bd2-c917040cfcf6 rr:objectMap km-dev:RefObjectMap_c2232836-4eeb-49de-8b1a-3e3b908f0ff2 .
+km-dev:PredicateObjectMap_1f2f2c24-5fa2-4dfc-8372-f054b7ef60b2 rr:objectMap km-dev:RefObjectMap_4c9d5d88-2bba-4d7c-86cc-8e44911d7280 .
 
-km-dev:TriplesMap_d6daad96-f148-4975-aabd-caa0f02faf92 rr:predicateObjectMap km-dev:PredicateObjectMap_327ce23b-d1fa-49ad-8bd2-c917040cfcf6 .
+km-dev:TriplesMap_891cdbee-42cf-46d2-bc2a-9af34e59794b rr:predicateObjectMap km-dev:PredicateObjectMap_1f2f2c24-5fa2-4dfc-8372-f054b7ef60b2 .
 
-km-dev:PredicateObjectMap_327ce23b-d1fa-49ad-8bd2-c917040cfcf6 a rr:PredicateObjectMap ;
-	km-dev:isPartOfMapping _:node1b9g34vojx1 .
+km-dev:PredicateObjectMap_1f2f2c24-5fa2-4dfc-8372-f054b7ef60b2 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1b9miee73x1 .
 
-_:node1b9g34vojx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_327ce23b-d1fa-49ad-8bd2-c917040cfcf6 .
+_:node1b9miee73x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_1f2f2c24-5fa2-4dfc-8372-f054b7ef60b2 .
 
-km-dev:TriplesMap_b1f5c7f6-f714-46cf-ac11-87b70631d5b1 a rr:TriplesMap .
+km-dev:TriplesMap_27cf539a-b798-49d1-9d97-41ff432259fc a rr:TriplesMap .
 
-_:node1b9g34vojx1 km-dev:hasTriplesMap km-dev:TriplesMap_b1f5c7f6-f714-46cf-ac11-87b70631d5b1 .
+_:node1b9miee73x1 km-dev:hasTriplesMap km-dev:TriplesMap_27cf539a-b798-49d1-9d97-41ff432259fc .
 
-km-dev:TriplesMap_b1f5c7f6-f714-46cf-ac11-87b70631d5b1 km-dev:isPartOfMapping _:node1b9g34vojx1 .
+km-dev:TriplesMap_27cf539a-b798-49d1-9d97-41ff432259fc km-dev:isPartOfMapping _:node1b9miee73x1 .
 
-_:node1b9g34vojx4 rr:tableName "AutryCultureMade.csv" ;
+_:node1b9miee73x4 rr:tableName "AutryCultureMade.csv" ;
 	a rr:LogicalTable ;
-	km-dev:isPartOfMapping _:node1b9g34vojx1 .
+	km-dev:isPartOfMapping _:node1b9miee73x1 .
 
-_:node1b9g34vojx1 km-dev:hasLogicalTable _:node1b9g34vojx4 .
+_:node1b9miee73x1 km-dev:hasLogicalTable _:node1b9miee73x4 .
 
-km-dev:TriplesMap_b1f5c7f6-f714-46cf-ac11-87b70631d5b1 rr:logicalTable _:node1b9g34vojx4 ;
-	rr:subjectMap _:node1b9g34vojx5 .
+km-dev:TriplesMap_27cf539a-b798-49d1-9d97-41ff432259fc rr:logicalTable _:node1b9miee73x4 ;
+	rr:subjectMap _:node1b9miee73x5 .
 
-_:node1b9g34vojx1 km-dev:hasSubjectMap _:node1b9g34vojx5 .
+_:node1b9miee73x1 km-dev:hasSubjectMap _:node1b9miee73x5 .
 
-_:node1b9g34vojx5 km-dev:isPartOfMapping _:node1b9g34vojx1 ;
+_:node1b9miee73x5 km-dev:isPartOfMapping _:node1b9miee73x1 ;
 	a rr:SubjectMap ;
 	km-dev:alignmentNodeId "http://www.cidoc-crm.org/cidoc-crm/E39_Actor1" ;
 	rr:class crm:E39_Actor ;
 	rr:template "{ArtistURI}" .
 
-km-dev:PredicateObjectMap_cff1aa2f-6867-475f-bffe-8c52065390af rr:predicate crm:P107i_is_current_or_former_member_of .
+km-dev:PredicateObjectMap_d1e6ac58-c7d8-4461-818d-be7bfaa291aa rr:predicate crm:P107i_is_current_or_former_member_of .
 
-km-dev:RefObjectMap_73348371-3a83-41ba-a772-90a29473b279 a rr:RefObjectMap , rr:ObjectMap ;
-	rr:parentTriplesMap km-dev:TriplesMap_56a30ab7-4015-4eb8-a85b-0e5efa841cc7 ;
-	km-dev:isPartOfMapping _:node1b9g34vojx1 .
+km-dev:RefObjectMap_d3e7d0b0-41c6-43e5-bd23-373ccb7a0f86 a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_1042b5bf-ae86-4fd2-bede-5ae7741ae4b0 ;
+	km-dev:isPartOfMapping _:node1b9miee73x1 .
 
-_:node1b9g34vojx1 km-dev:hasObjectMap km-dev:RefObjectMap_73348371-3a83-41ba-a772-90a29473b279 .
+_:node1b9miee73x1 km-dev:hasObjectMap km-dev:RefObjectMap_d3e7d0b0-41c6-43e5-bd23-373ccb7a0f86 .
 
-km-dev:PredicateObjectMap_cff1aa2f-6867-475f-bffe-8c52065390af rr:objectMap km-dev:RefObjectMap_73348371-3a83-41ba-a772-90a29473b279 .
+km-dev:PredicateObjectMap_d1e6ac58-c7d8-4461-818d-be7bfaa291aa rr:objectMap km-dev:RefObjectMap_d3e7d0b0-41c6-43e5-bd23-373ccb7a0f86 .
 
-km-dev:TriplesMap_b1f5c7f6-f714-46cf-ac11-87b70631d5b1 rr:predicateObjectMap km-dev:PredicateObjectMap_cff1aa2f-6867-475f-bffe-8c52065390af .
+km-dev:TriplesMap_27cf539a-b798-49d1-9d97-41ff432259fc rr:predicateObjectMap km-dev:PredicateObjectMap_d1e6ac58-c7d8-4461-818d-be7bfaa291aa .
 
-km-dev:PredicateObjectMap_cff1aa2f-6867-475f-bffe-8c52065390af a rr:PredicateObjectMap ;
-	km-dev:isPartOfMapping _:node1b9g34vojx1 .
+km-dev:PredicateObjectMap_d1e6ac58-c7d8-4461-818d-be7bfaa291aa a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1b9miee73x1 .
 
-_:node1b9g34vojx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_cff1aa2f-6867-475f-bffe-8c52065390af .
+_:node1b9miee73x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_d1e6ac58-c7d8-4461-818d-be7bfaa291aa .
 
-km-dev:TriplesMap_38867ad7-8cbe-4bf0-8a78-0a9a6aa2930e a rr:TriplesMap .
+km-dev:TriplesMap_f3ae5403-8080-46bc-9033-4318efcce026 a rr:TriplesMap .
 
-_:node1b9g34vojx1 km-dev:hasTriplesMap km-dev:TriplesMap_38867ad7-8cbe-4bf0-8a78-0a9a6aa2930e .
+_:node1b9miee73x1 km-dev:hasTriplesMap km-dev:TriplesMap_f3ae5403-8080-46bc-9033-4318efcce026 .
 
-km-dev:TriplesMap_38867ad7-8cbe-4bf0-8a78-0a9a6aa2930e km-dev:isPartOfMapping _:node1b9g34vojx1 .
+km-dev:TriplesMap_f3ae5403-8080-46bc-9033-4318efcce026 km-dev:isPartOfMapping _:node1b9miee73x1 .
 
-_:node1b9g34vojx6 rr:tableName "AutryCultureMade.csv" ;
+_:node1b9miee73x6 rr:tableName "AutryCultureMade.csv" ;
 	a rr:LogicalTable ;
-	km-dev:isPartOfMapping _:node1b9g34vojx1 .
+	km-dev:isPartOfMapping _:node1b9miee73x1 .
 
-_:node1b9g34vojx1 km-dev:hasLogicalTable _:node1b9g34vojx6 .
+_:node1b9miee73x1 km-dev:hasLogicalTable _:node1b9miee73x6 .
 
-km-dev:TriplesMap_38867ad7-8cbe-4bf0-8a78-0a9a6aa2930e rr:logicalTable _:node1b9g34vojx6 ;
-	rr:subjectMap _:node1b9g34vojx7 .
+km-dev:TriplesMap_f3ae5403-8080-46bc-9033-4318efcce026 rr:logicalTable _:node1b9miee73x6 ;
+	rr:subjectMap _:node1b9miee73x7 .
 
-_:node1b9g34vojx1 km-dev:hasSubjectMap _:node1b9g34vojx7 .
+_:node1b9miee73x1 km-dev:hasSubjectMap _:node1b9miee73x7 .
 
-_:node1b9g34vojx7 km-dev:isPartOfMapping _:node1b9g34vojx1 ;
+_:node1b9miee73x7 km-dev:isPartOfMapping _:node1b9miee73x1 ;
 	a rr:SubjectMap ;
 	km-dev:alignmentNodeId "http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object1" ;
 	rr:class crm:E22_Man-Made_Object ;
 	rr:template "object/{ObjectID}" ;
 	a km-dev:steinerTreeRootNode .
 
-km-dev:PredicateObjectMap_3ca2bba5-254f-4bda-aeee-ffa92d4ab95b rr:predicate crm:P108i_was_produced_by .
+km-dev:PredicateObjectMap_ff3252dd-31c7-4e06-a30a-1da466e8722c rr:predicate crm:P108i_was_produced_by .
 
-km-dev:RefObjectMap_c5bf9d80-1796-446b-892b-54d5903f1045 a rr:RefObjectMap , rr:ObjectMap ;
-	rr:parentTriplesMap km-dev:TriplesMap_d6daad96-f148-4975-aabd-caa0f02faf92 ;
-	km-dev:isPartOfMapping _:node1b9g34vojx1 .
+km-dev:RefObjectMap_b9988f5e-9f9e-4962-9858-25ce3cb4823d a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_891cdbee-42cf-46d2-bc2a-9af34e59794b ;
+	km-dev:isPartOfMapping _:node1b9miee73x1 .
 
-_:node1b9g34vojx1 km-dev:hasObjectMap km-dev:RefObjectMap_c5bf9d80-1796-446b-892b-54d5903f1045 .
+_:node1b9miee73x1 km-dev:hasObjectMap km-dev:RefObjectMap_b9988f5e-9f9e-4962-9858-25ce3cb4823d .
 
-km-dev:PredicateObjectMap_3ca2bba5-254f-4bda-aeee-ffa92d4ab95b rr:objectMap km-dev:RefObjectMap_c5bf9d80-1796-446b-892b-54d5903f1045 .
+km-dev:PredicateObjectMap_ff3252dd-31c7-4e06-a30a-1da466e8722c rr:objectMap km-dev:RefObjectMap_b9988f5e-9f9e-4962-9858-25ce3cb4823d .
 
-km-dev:TriplesMap_38867ad7-8cbe-4bf0-8a78-0a9a6aa2930e rr:predicateObjectMap km-dev:PredicateObjectMap_3ca2bba5-254f-4bda-aeee-ffa92d4ab95b .
+km-dev:TriplesMap_f3ae5403-8080-46bc-9033-4318efcce026 rr:predicateObjectMap km-dev:PredicateObjectMap_ff3252dd-31c7-4e06-a30a-1da466e8722c .
 
-km-dev:PredicateObjectMap_3ca2bba5-254f-4bda-aeee-ffa92d4ab95b a rr:PredicateObjectMap ;
-	km-dev:isPartOfMapping _:node1b9g34vojx1 .
+km-dev:PredicateObjectMap_ff3252dd-31c7-4e06-a30a-1da466e8722c a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1b9miee73x1 .
 
-_:node1b9g34vojx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_3ca2bba5-254f-4bda-aeee-ffa92d4ab95b .
+_:node1b9miee73x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_ff3252dd-31c7-4e06-a30a-1da466e8722c .
 
-km-dev:TriplesMap_56a30ab7-4015-4eb8-a85b-0e5efa841cc7 a rr:TriplesMap .
+km-dev:TriplesMap_1042b5bf-ae86-4fd2-bede-5ae7741ae4b0 a rr:TriplesMap .
 
-_:node1b9g34vojx1 km-dev:hasTriplesMap km-dev:TriplesMap_56a30ab7-4015-4eb8-a85b-0e5efa841cc7 .
+_:node1b9miee73x1 km-dev:hasTriplesMap km-dev:TriplesMap_1042b5bf-ae86-4fd2-bede-5ae7741ae4b0 .
 
-km-dev:TriplesMap_56a30ab7-4015-4eb8-a85b-0e5efa841cc7 km-dev:isPartOfMapping _:node1b9g34vojx1 .
+km-dev:TriplesMap_1042b5bf-ae86-4fd2-bede-5ae7741ae4b0 km-dev:isPartOfMapping _:node1b9miee73x1 .
 
-_:node1b9g34vojx8 rr:tableName "AutryCultureMade.csv" ;
+_:node1b9miee73x8 rr:tableName "AutryCultureMade.csv" ;
 	a rr:LogicalTable ;
-	km-dev:isPartOfMapping _:node1b9g34vojx1 .
+	km-dev:isPartOfMapping _:node1b9miee73x1 .
 
-_:node1b9g34vojx1 km-dev:hasLogicalTable _:node1b9g34vojx8 .
+_:node1b9miee73x1 km-dev:hasLogicalTable _:node1b9miee73x8 .
 
-km-dev:TriplesMap_56a30ab7-4015-4eb8-a85b-0e5efa841cc7 rr:logicalTable _:node1b9g34vojx8 ;
-	rr:subjectMap _:node1b9g34vojx9 .
+km-dev:TriplesMap_1042b5bf-ae86-4fd2-bede-5ae7741ae4b0 rr:logicalTable _:node1b9miee73x8 ;
+	rr:subjectMap _:node1b9miee73x9 .
 
-_:node1b9g34vojx1 km-dev:hasSubjectMap _:node1b9g34vojx9 .
+_:node1b9miee73x1 km-dev:hasSubjectMap _:node1b9miee73x9 .
 
-_:node1b9g34vojx9 km-dev:isPartOfMapping _:node1b9g34vojx1 ;
+_:node1b9miee73x9 km-dev:isPartOfMapping _:node1b9miee73x1 ;
 	a rr:SubjectMap ;
 	km-dev:alignmentNodeId "http://www.cidoc-crm.org/cidoc-crm/E74_Group1" ;
 	rr:class crm:E74_Group ;
 	rr:template "{CultureURI}" .
 
-km-dev:PredicateObjectMap_f45ede2c-36e5-464e-a8c9-00e630643594 rr:predicate rdfs:label .
+km-dev:PredicateObjectMap_02ef8c23-7e6b-4a91-b79f-0d78557b64f0 rr:predicate rdfs:label .
 
-_:node1b9g34vojx10 rr:column "Culture" ;
+_:node1b9miee73x10 rr:column "Culture" ;
 	a rr:ObjectMap ;
 	rr:language "null" ;
-	km-dev:isPartOfMapping _:node1b9g34vojx1 .
+	km-dev:isPartOfMapping _:node1b9miee73x1 .
 
-_:node1b9g34vojx1 km-dev:hasObjectMap _:node1b9g34vojx10 .
+_:node1b9miee73x1 km-dev:hasObjectMap _:node1b9miee73x10 .
 
-km-dev:PredicateObjectMap_f45ede2c-36e5-464e-a8c9-00e630643594 rr:objectMap _:node1b9g34vojx10 .
+km-dev:PredicateObjectMap_02ef8c23-7e6b-4a91-b79f-0d78557b64f0 rr:objectMap _:node1b9miee73x10 .
 
-km-dev:TriplesMap_56a30ab7-4015-4eb8-a85b-0e5efa841cc7 rr:predicateObjectMap km-dev:PredicateObjectMap_f45ede2c-36e5-464e-a8c9-00e630643594 .
+km-dev:TriplesMap_1042b5bf-ae86-4fd2-bede-5ae7741ae4b0 rr:predicateObjectMap km-dev:PredicateObjectMap_02ef8c23-7e6b-4a91-b79f-0d78557b64f0 .
 
-km-dev:PredicateObjectMap_f45ede2c-36e5-464e-a8c9-00e630643594 a rr:PredicateObjectMap ;
-	km-dev:isPartOfMapping _:node1b9g34vojx1 .
+km-dev:PredicateObjectMap_02ef8c23-7e6b-4a91-b79f-0d78557b64f0 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1b9miee73x1 .
 
-_:node1b9g34vojx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_f45ede2c-36e5-464e-a8c9-00e630643594 .
+_:node1b9miee73x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_02ef8c23-7e6b-4a91-b79f-0d78557b64f0 .
