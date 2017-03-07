@@ -1,9 +1,14 @@
-# AutryObjects_Sheet1
+# AutryObjects.csv
 
 ## Add Column
 
 ## Add Node/Literal
 #### Literal Node: `http://vocab.getty.edu/aat/300179869`
+Literal Type: ``
+<br/>Language: ``
+<br/>isUri: `true`
+
+#### Literal Node: `http://vocab.getty.edu/ulan/500312945`
 Literal Type: ``
 <br/>Language: ``
 <br/>isUri: `true`
@@ -210,8 +215,7 @@ return getValue("AutryObjectURL")
 | _ObjectURI_ | `uri` | `crm:E22_Man-Made_Object1`|
 | _Owner_ | `rdfs:label` | `crm:E40_Legal_Body1`|
 | _OwnerURI_ | `uri` | `crm:E40_Legal_Body1`|
-| _OwnerURL_ | `uri` | `foaf:Document1`|
-| _OwnerURLCopy_ | `rdfs:label` | `foaf:Document1`|
+| _OwnerURL_ | `uri` | `crm:E40_Legal_Body1`|
 | _PreferredIDURI_ | `uri` | `crm:E42_Identifier1`|
 | _PreferredTermsURI_ | `uri` | `crm:E55_Type1`|
 | _RepositoryTermsURI_ | `uri` | `crm:E55_Type7`|
@@ -225,7 +229,7 @@ return getValue("AutryObjectURL")
 | From | Property | To |
 |  --- | -------- | ---|
 | `crm:E17_Type_Assignment1` | `crm:P42_assigned` | `crm:E55_Type6`|
-| `crm:E17_Type_Assignment1` | `crm:P21_had_general_purpose` | `xsd:http://vocab.getty.edu/aat/300179869`|
+| `crm:E17_Type_Assignment1` | `crm:P21_had_general_purpose` | `http://vocab.getty.edu/aat/300179869`|
 | `crm:E22_Man-Made_Object1` | `crm:P41i_was_classified_by` | `crm:E17_Type_Assignment1`|
 | `crm:E22_Man-Made_Object1` | `crm:P67i_is_referred_to_by` | `crm:E33_Linguistic_Object1`|
 | `crm:E22_Man-Made_Object1` | `crm:P67i_is_referred_to_by` | `crm:E33_Linguistic_Object2`|
@@ -240,6 +244,6 @@ return getValue("AutryObjectURL")
 | `crm:E33_Linguistic_Object2` | `crm:P2_has_type` | `crm:E55_Type4`|
 | `crm:E33_Linguistic_Object3` | `crm:P2_has_type` | `crm:E55_Type5`|
 | `crm:E35_Title1` | `crm:P2_has_type` | `crm:E55_Type2`|
-| `crm:E40_Legal_Body1` | `foaf:homepage` | `foaf:Document1`|
+| `crm:E40_Legal_Body1` | `skos:exactMatch` | `http://vocab.getty.edu/ulan/500312945`|
 | `crm:E42_Identifier1` | `crm:P2_has_type` | `crm:E55_Type1`|
 | `crm:E42_Identifier2` | `crm:P2_has_type` | `crm:E55_Type7`|
