@@ -54,10 +54,13 @@ else:
     return ''
 ```
 
-#### _OwnerURI_
+#### _NotInUse_
 From column: _Owner_
 ``` python
-return "http://data.americanartcollaborative.org/autry"
+if getValue("Owner"):
+    return UM.uri_from_fields("object/owner/", getValue("Owner"))
+else:
+    return ''
 ```
 
 #### _CreditLineURI_
@@ -182,6 +185,12 @@ return getValue("OwnerURL")
 From column: _AutryObjectURL_
 ``` python
 return getValue("AutryObjectURL")
+```
+
+#### _OwnerURI_
+From column: _Owner_
+``` python
+return "http://data.americanartcollaborative.org/autry"
 ```
 
 
