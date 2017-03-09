@@ -5,28 +5,28 @@
 ## Add Node/Literal
 
 ## PyTransforms
+#### _ObjectID_
+From column: _ObjectID_
+``` python
+return getValue("ObjectID")
+```
+
 #### _ObjectURI_
 From column: _ObjectID_
 ``` python
-return "object/"+getValue("ObjectID")
+return UM.uri_from_fields("object/", getValue("ObjectID"))
 ```
 
-#### _ArtistURI_
-From column: _Culture_
+#### _TypeAssignmentURI_
+From column: _ObjectURI_
 ``` python
-return getValue("Culture").replace(" ","-").split("?")[0]
+return getValue("ObjectURI")+"/culture"
 ```
 
 #### _CultureURI_
-From column: _ArtistURI_
+From column: _TypeAssignmentURI_
 ``` python
-return "thesauri/culture/" + getValue("Culture").replace(" ","_").split("?")[0]
-```
-
-#### _ProductionURI_
-From column: _ObjectURI_
-``` python
-return getValue("ObjectURI")+"/production"
+return UM.uri_from_fields("thesauri/culture/",getValue("Culture"))
 ```
 
 
@@ -35,16 +35,14 @@ return getValue("ObjectURI")+"/production"
 ## Semantic Types
 | Column | Property | Class |
 |  ----- | -------- | ----- |
-| _ArtistURI_ | `uri` | `crm:E39_Actor1`|
-| _Culture_ | `rdfs:label` | `crm:E74_Group1`|
-| _CultureURI_ | `uri` | `crm:E74_Group1`|
+| _Culture_ | `rdfs:label` | `crm:E55_Type1`|
+| _CultureURI_ | `uri` | `crm:E55_Type1`|
 | _ObjectURI_ | `uri` | `crm:E22_Man-Made_Object1`|
-| _ProductionURI_ | `uri` | `crm:E12_Production1`|
+| _TypeAssignmentURI_ | `uri` | `crm:E17_Type_Assignment1`|
 
 
 ## Links
 | From | Property | To |
 |  --- | -------- | ---|
-| `crm:E12_Production1` | `crm:P14_carried_out_by` | `crm:E39_Actor1`|
-| `crm:E22_Man-Made_Object1` | `crm:P108i_was_produced_by` | `crm:E12_Production1`|
-| `crm:E39_Actor1` | `crm:P107i_is_current_or_former_member_of` | `crm:E74_Group1`|
+| `crm:E17_Type_Assignment1` | `crm:P42_assigned` | `crm:E55_Type1`|
+| `crm:E22_Man-Made_Object1` | `crm:P41i_was_classified_by` | `crm:E17_Type_Assignment1`|
