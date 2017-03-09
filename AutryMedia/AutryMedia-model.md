@@ -1,4 +1,4 @@
-# AutryMedia_Sheet1
+# AutryMedia.csv
 
 ## Add Column
 
@@ -43,11 +43,7 @@ return getValue("AutryObjectURL")
 |  ----- | -------- | ----- |
 | _AutryObjectURL_ | `uri` | `foaf:Document1`|
 | _AutryObjectURLCopy_ | `rdfs:label` | `foaf:Document1`|
-| _ObjectID_ | `rdfs:label` | `crm:E42_Identifier1`|
-| _ObjectIDCopy_ | `rdf:value` | `crm:E42_Identifier1`|
-| _ObjectIDURI_ | `uri` | `crm:E42_Identifier1`|
 | _ObjectURI_ | `uri` | `crm:E22_Man-Made_Object1`|
-| _RepositoryTermsURI_ | `uri` | `crm:E55_Type1`|
 | _imagelink_ | `uri` | `crm:E38_Image1`|
 
 
@@ -55,6 +51,4 @@ return getValue("AutryObjectURL")
 | From | Property | To |
 |  --- | -------- | ---|
 | `crm:E22_Man-Made_Object1` | `crm:P138i_has_representation` | `crm:E38_Image1`|
-| `crm:E22_Man-Made_Object1` | `crm:P1_is_identified_by` | `crm:E42_Identifier1`|
 | `crm:E22_Man-Made_Object1` | `foaf:homepage` | `foaf:Document1`|
-| `crm:E42_Identifier1` | `crm:P2_has_type` | `crm:E55_Type1`|
