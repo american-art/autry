@@ -57,7 +57,7 @@ else:
 #### _OwnerURI_
 From column: _Owner_
 ``` python
-return "data.americanartcollaborative.org/autry"
+return "http://data.americanartcollaborative.org/autry"
 ```
 
 #### _CreditLineURI_
