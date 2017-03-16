@@ -130,8 +130,8 @@ else:
 From column: _ClassificationURI_
 ``` python
 if getValue("ObjectName"):
-    prefix = getValue("ObjectURI") + "/classification_event/"
-    return UM.uri_from_fields(prefix, getValue("ObjectName"))
+    prefix = getValue("ObjectURI") + "/classification_event"
+    return prefix
 else:
     return ''
 ```
@@ -140,7 +140,7 @@ else:
 From column: _ClassificationEventURI_
 ``` python
 if getValue("ObjectName"):
-    return "http://vocab.getty.edu/aat/300179869"
+    return AATTerm.get_aat_uri("autry",getValue("ObjectName"))
 else:
     return ''
 ```
@@ -203,7 +203,6 @@ return "http://data.americanartcollaborative.org/autry"
 | _AutryObjectURL_ | `uri` | `foaf:Document2`|
 | _AutryObjectURLCopy_ | `rdfs:label` | `foaf:Document2`|
 | _ClassificationEventURI_ | `uri` | `crm:E17_Type_Assignment1`|
-| _ClassificationURI_ | `uri` | `crm:E55_Type6`|
 | _CreditLine_ | `rdf:value` | `crm:E33_Linguistic_Object1`|
 | _CreditLineURI_ | `uri` | `crm:E33_Linguistic_Object1`|
 | _DimensionsAATURI_ | `uri` | `crm:E55_Type4`|
@@ -228,6 +227,7 @@ return "http://data.americanartcollaborative.org/autry"
 | _TitleCopy_ | `rdf:value` | `crm:E35_Title1`|
 | _TitlePreferredTermsURI_ | `uri` | `crm:E55_Type2`|
 | _TitleURI_ | `uri` | `crm:E35_Title1`|
+| _VisualWorksURI_ | `uri` | `crm:E55_Type6`|
 
 
 ## Links
@@ -243,8 +243,8 @@ return "http://data.americanartcollaborative.org/autry"
 | `crm:E22_Man-Made_Object1` | `crm:P52_has_current_owner` | `crm:E40_Legal_Body1`|
 | `crm:E22_Man-Made_Object1` | `crm:P1_is_identified_by` | `crm:E42_Identifier1`|
 | `crm:E22_Man-Made_Object1` | `crm:P1_is_identified_by` | `crm:E42_Identifier2`|
-| `crm:E22_Man-Made_Object1` | `crm:P2_has_type` | `crm:E55_Type6`|
 | `crm:E22_Man-Made_Object1` | `foaf:homepage` | `foaf:Document2`|
+| `crm:E22_Man-Made_Object1` | `crm:P2_has_type` | `crm:E55_Type6`|
 | `crm:E33_Linguistic_Object1` | `crm:P2_has_type` | `crm:E55_Type3`|
 | `crm:E33_Linguistic_Object2` | `crm:P2_has_type` | `crm:E55_Type4`|
 | `crm:E33_Linguistic_Object3` | `crm:P2_has_type` | `crm:E55_Type5`|
