@@ -97,8 +97,8 @@ return getValue("ObjectURI") + "/production"
 #### _BirthURI_
 From column: _BirthYear_
 ``` python
-if getValue("EarliestBirthYear") or getValue("LatestBirthYear"):
-    return getValue("MakerURI") + "/birth_timespan"
+if getValue("BirthYear"):
+    return getValue("MakerURI") + "/birth"
 else:
     return ''
 ```
@@ -115,8 +115,8 @@ else:
 #### _DeathURI_
 From column: _DeathYear_
 ``` python
-if getValue("EarliestDeathDate") or getValue("LatestDeathDate"):
-    return getValue("MakerURI") + "/death_timespan"
+if getValue("DeathYear"):
+    return getValue("MakerURI") + "/death"
 else:
     return ''
 ```
@@ -124,7 +124,7 @@ else:
 #### _DeathTimespanURI_
 From column: _DeathYear_
 ``` python
-if getValue("EarliestDeathDate") or getValue("LatestDeathDate"):
+if getValue("DeathYear") or getValue("LatestDeathDate"):
     return getValue("MakerURI") + "/death_timespan"
 else:
     return ''
@@ -285,20 +285,15 @@ else:
 |  --- | -------- | ---|
 | `crm:E12_Production1` | `crm:P14_carried_out_by` | `crm:E39_Actor1`|
 | `crm:E22_Man-Made_Object1` | `crm:P108i_was_produced_by` | `crm:E12_Production1`|
-| `crm:E22_Man-Made_Object1` | `crm:P62_depicts` | `crm:E39_Actor2`|
-| `crm:E22_Man-Made_Object1` | `crm:P2_has_type` | `crm:E55_Type1`|
 | `crm:E39_Actor1` | `crm:P1_is_identified_by` | `crm:E42_Identifier1`|
 | `crm:E39_Actor1` | `crm:P92i_was_brought_into_existence_by` | `crm:E63_Beginning_of_Existence1`|
 | `crm:E39_Actor1` | `crm:P93i_was_taken_out_of_existence_by` | `crm:E64_End_of_Existence1`|
+| `crm:E39_Actor1` | `crm:P107i_is_current_or_former_member_of` | `crm:E74_Group1`|
 | `crm:E39_Actor1` | `crm:P131_is_identified_by` | `crm:E82_Actor_Appellation1`|
 | `crm:E39_Actor1` | `skos:exactMatch` | `skos:Concept1`|
 | `crm:E39_Actor1` | `foaf:homepage` | `foaf:Document1`|
-| `crm:E39_Actor1` | `crm:P107i_is_current_or_former_member_of` | `crm:E74_Group1`|
-| `crm:E39_Actor2` | `crm:P107i_is_current_or_former_member_of` | `crm:E74_Group1`|
 | `crm:E42_Identifier1` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300404670`|
-| `crm:E63_Beginning_of_Existence1` | `crm:P4_has_time-span` | `crm:E52_Time-Span2`|
 | `crm:E63_Beginning_of_Existence1` | `crm:P4_has_time-span` | `crm:E52_Time-Span1`|
-| `crm:E64_End_of_Existence1` | `crm:P4_has_time-span` | `crm:E52_Time-Span1`|
 | `crm:E64_End_of_Existence1` | `crm:P4_has_time-span` | `crm:E52_Time-Span2`|
 | `crm:E74_Group1` | `crm:P2_has_type` | `crm:E55_Type2`|
 | `crm:E82_Actor_Appellation1` | `crm:P2_has_type` | `crm:E55_Type1`|
