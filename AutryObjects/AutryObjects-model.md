@@ -67,7 +67,7 @@ else:
 From column: _CreditLine_
 ``` python
 if getValue("CreditLine"):
-    return UM.uri_from_fields("object/credit_line/", getValue("CreditLine"))
+    return getValue("ObjectURI")+"/credit_line"
 else:
     return ''
 ```
