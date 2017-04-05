@@ -140,7 +140,7 @@ return getValue("AutryMakerURL")
 From column: _DeathYear_
 ``` python
 if getValue("DeathYear") != '':
-    return "12-31-" + getValue("DeathYear")
+    return getValue("DeathYear") + "-12-31"
 else:
     return ''
 ```
@@ -149,7 +149,7 @@ else:
 From column: _DeathYear_
 ``` python
 if getValue("DeathYear") != '':
-    return "1-1-" + getValue("DeathYear")
+    return getValue("DeathYear") + "-1-1"
 else:
     return ''
 ```
@@ -158,7 +158,7 @@ else:
 From column: _BirthYear_
 ``` python
 if getValue("BirthYear") != '':
-    return "12-31-" + getValue("BirthYear")
+    return getValue("BirthYear") + "-12-31"
 else:
     return ''
 ```
@@ -167,7 +167,7 @@ else:
 From column: _BirthYear_
 ``` python
 if getValue("BirthYear") != '':
-    return "1-1-" + getValue("BirthYear")
+    return getValue("BirthYear") + "-1-1"
 else:
     return ''
 ```
@@ -285,13 +285,16 @@ else:
 |  --- | -------- | ---|
 | `crm:E12_Production1` | `crm:P14_carried_out_by` | `crm:E39_Actor1`|
 | `crm:E22_Man-Made_Object1` | `crm:P108i_was_produced_by` | `crm:E12_Production1`|
+| `crm:E22_Man-Made_Object1` | `crm:P62_depicts` | `crm:E39_Actor2`|
 | `crm:E39_Actor1` | `crm:P1_is_identified_by` | `crm:E42_Identifier1`|
 | `crm:E39_Actor1` | `crm:P92i_was_brought_into_existence_by` | `crm:E63_Beginning_of_Existence1`|
 | `crm:E39_Actor1` | `crm:P93i_was_taken_out_of_existence_by` | `crm:E64_End_of_Existence1`|
-| `crm:E39_Actor1` | `crm:P107i_is_current_or_former_member_of` | `crm:E74_Group1`|
 | `crm:E39_Actor1` | `crm:P131_is_identified_by` | `crm:E82_Actor_Appellation1`|
 | `crm:E39_Actor1` | `skos:exactMatch` | `skos:Concept1`|
 | `crm:E39_Actor1` | `foaf:homepage` | `foaf:Document1`|
+| `crm:E39_Actor1` | `crm:P107i_is_current_or_former_member_of` | `crm:E74_Group1`|
+| `crm:E39_Actor2` | `crm:P107i_is_current_or_former_member_of` | `crm:E74_Group1`|
+| `crm:E39_Actor2` | `crm:P93i_was_taken_out_of_existence_by` | `crm:E64_End_of_Existence1`|
 | `crm:E42_Identifier1` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300404670`|
 | `crm:E63_Beginning_of_Existence1` | `crm:P4_has_time-span` | `crm:E52_Time-Span1`|
 | `crm:E64_End_of_Existence1` | `crm:P4_has_time-span` | `crm:E52_Time-Span2`|
