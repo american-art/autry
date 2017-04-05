@@ -27,7 +27,7 @@ return getValue("ProductionURI") + "/timespan"
 From column: _EARLIEST_YEAR_
 ``` python
 if getValue("EARLIEST_YEAR"):
-    return "01-01-"+getValue("EARLIEST_YEAR")
+    return getValue("EARLIEST_YEAR") + "-01-01"
 else:
     return ""
 ```
@@ -36,7 +36,7 @@ else:
 From column: _LATEST_YEAR_
 ``` python
 if getValue("LATEST_YEAR"):
-    return "12-31-"+getValue("LATEST_YEAR")
+    return getValue("LATEST_YEAR") + "-12-31"
 else:
     return ""
 ```
