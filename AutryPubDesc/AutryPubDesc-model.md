@@ -1,4 +1,4 @@
-# AutryPubDesc_Sheet1
+# AutryPubDesc.csv
 
 ## Add Column
 
@@ -46,7 +46,6 @@ return getValue("PublicDescription")
 | _DescriptionURI_ | `uri` | `crm:E33_Linguistic_Object1`|
 | _ObjectURI_ | `uri` | `crm:E22_Man-Made_Object1`|
 | _PreferredTermsURI_ | `uri` | `crm:E55_Type2`|
-| _PublicDescription_ | `dc:description` | `crm:E22_Man-Made_Object1`|
 | _PublicDescriptionCopy_ | `rdf:value` | `crm:E33_Linguistic_Object1`|
 
 
