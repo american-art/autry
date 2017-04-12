@@ -106,7 +106,7 @@ else:
 #### _BirthTimespanURI_
 From column: _BirthYear_
 ``` python
-if getValue("BirthYear") != 'NULL':
+if getValue("BirthYear") or getValue("LatestBirthDate"):
     return getValue("MakerURI") + "/birth_timespan"
 else:
     return ''
@@ -277,6 +277,7 @@ else:
 | _Pref_Id_URI_ | `uri` | `crm:E42_Identifier1`|
 | _PreferredTermsURI_ | `uri` | `crm:E55_Type1`|
 | _ProductionURI_ | `uri` | `crm:E12_Production1`|
+| _ULAN_ID_ | `rdfs:label` | `skos:Concept1`|
 | _UlanURI_ | `uri` | `skos:Concept1`|
 
 
