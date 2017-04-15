@@ -14,13 +14,19 @@ return UM.uri_from_fields("object/", getValue("ObjectID"))
 #### _ProductionURI_
 From column: _ObjectURI_
 ``` python
-return getValue("ObjectURI") + "/production"
+if getValue("EARLIEST_YEAR"):
+    return getValue("ObjectURI") + "/production"
+else:
+    return ""
 ```
 
 #### _ProductionTimespanURI_
 From column: _ProductionURI_
 ``` python
-return getValue("ProductionURI") + "/timespan"
+if getValue("EARLIEST_YEAR"):
+    return getValue("ProductionURI") + "/timespan"
+else:
+    return ""
 ```
 
 #### _StartDateFormatted_
@@ -56,7 +62,7 @@ else:
 ## Semantic Types
 | Column | Property | Class |
 |  ----- | -------- | ----- |
-| _DateLabel_ | `rdfs:label` | `crm:E52_Time-Span1`|
+| _Dated_ | `rdfs:label` | `crm:E52_Time-Span1`|
 | _EndDateFormatted_ | `crm:P82b_end_of_the_end` | `crm:E52_Time-Span1`|
 | _ObjectURI_ | `uri` | `crm:E22_Man-Made_Object1`|
 | _ProductionTimespanURI_ | `uri` | `crm:E52_Time-Span1`|
