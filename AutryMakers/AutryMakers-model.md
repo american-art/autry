@@ -70,7 +70,7 @@ if dash_index != -1:
 return ''
 ```
 
-#### _MakerURI_
+#### _NIU1_
 From column: _Maker_
 ``` python
 if getValue("MakerID") != 'NULL':
@@ -80,7 +80,7 @@ else:
 ```
 
 #### _MakerAppellationURI_
-From column: _MakerURI_
+From column: _NIU1_
 ``` python
 if getValue("MakerURI") != 'NULL':
     return getValue("MakerURI") + "/name"
@@ -244,6 +244,15 @@ if getValue("EarliestDeathDate") or getValue("LatestDeathDate"):
     return getValue("EarliestDeathDate") + " to " + getValue("EarliestDeathDate")
 else:
     return ""
+```
+
+#### _MakerURI_
+From column: _NIU1_
+``` python
+if getValue("MakerID") != 'NULL':
+    return  UM.uri_from_fields("maker/", getValue("MakerID"))
+else:
+    return ''
 ```
 
 
