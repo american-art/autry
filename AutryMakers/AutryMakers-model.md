@@ -73,8 +73,8 @@ return ''
 #### _MakerURI_
 From column: _Maker_
 ``` python
-if getValue("Maker") != 'NULL':
-    return  UM.uri_from_fields("maker/", getValue("Maker"))
+if getValue("MakerID") != 'NULL':
+    return  UM.uri_from_fields("maker/", getValue("MakerID"))
 else:
     return ''
 ```
@@ -287,13 +287,15 @@ else:
 | `crm:E12_Production1` | `crm:P14_carried_out_by` | `crm:E39_Actor1`|
 | `crm:E22_Man-Made_Object1` | `crm:P108i_was_produced_by` | `crm:E12_Production1`|
 | `crm:E22_Man-Made_Object1` | `crm:P62_depicts` | `crm:E39_Actor2`|
-| `crm:E39_Actor1` | `crm:P1_is_identified_by` | `crm:E42_Identifier1`|
-| `crm:E39_Actor1` | `crm:P92i_was_brought_into_existence_by` | `crm:E63_Beginning_of_Existence1`|
+| `crm:E22_Man-Made_Object1` | `crm:P1_is_identified_by` | `crm:E42_Identifier1`|
 | `crm:E39_Actor1` | `crm:P93i_was_taken_out_of_existence_by` | `crm:E64_End_of_Existence1`|
 | `crm:E39_Actor1` | `crm:P131_is_identified_by` | `crm:E82_Actor_Appellation1`|
 | `crm:E39_Actor1` | `skos:exactMatch` | `skos:Concept1`|
 | `crm:E39_Actor1` | `foaf:homepage` | `foaf:Document1`|
+| `crm:E39_Actor1` | `crm:P1_is_identified_by` | `crm:E42_Identifier1`|
+| `crm:E39_Actor1` | `crm:P92i_was_brought_into_existence_by` | `crm:E63_Beginning_of_Existence1`|
 | `crm:E39_Actor1` | `crm:P107i_is_current_or_former_member_of` | `crm:E74_Group1`|
+| `crm:E39_Actor2` | `crm:P92i_was_brought_into_existence_by` | `crm:E63_Beginning_of_Existence1`|
 | `crm:E39_Actor2` | `crm:P107i_is_current_or_former_member_of` | `crm:E74_Group1`|
 | `crm:E39_Actor2` | `crm:P93i_was_taken_out_of_existence_by` | `crm:E64_End_of_Existence1`|
 | `crm:E42_Identifier1` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300404670`|
