@@ -19,33 +19,33 @@ n13[style="filled",color="white",fillcolor="lightgray",label="E52_Time-Span1"];
 n14[style="filled",color="white",fillcolor="lightgray",label="E52_Time-Span2"];
 n15[style="filled",color="white",fillcolor="lightgray",label="E55_Type2"];
 n16[style="filled",color="white",fillcolor="lightgray",label="E55_Type1"];
-n17[shape="plaintext",style="filled",fillcolor="gold",label="PreferredTermsURI"];
-n18[shape="plaintext",style="filled",fillcolor="gold",label="DeathURI"];
-n19[shape="plaintext",style="filled",fillcolor="gold",label="NationalityURI"];
-n20[shape="plaintext",style="filled",fillcolor="gold",label="DeathTimespanURI"];
-n21[shape="plaintext",style="filled",fillcolor="gold",label="EarliestDeathDate"];
-n22[shape="plaintext",style="filled",fillcolor="gold",label="MakerCopy"];
-n23[shape="plaintext",style="filled",fillcolor="gold",label="EarliestBirthYear"];
-n24[shape="plaintext",style="filled",fillcolor="gold",label="DeathLabel"];
-n25[shape="plaintext",style="filled",fillcolor="gold",label="ID_Label"];
-n26[shape="plaintext",style="filled",fillcolor="gold",label="LatestDeathDate"];
-n27[shape="plaintext",style="filled",fillcolor="gold",label="AutryMakerURLCopy"];
+n17[shape="plaintext",style="filled",fillcolor="gold",label="BirthTimespanURI"];
+n18[shape="plaintext",style="filled",fillcolor="gold",label="DeathLabel"];
+n19[shape="plaintext",style="filled",fillcolor="gold",label="Maker"];
+n20[shape="plaintext",style="filled",fillcolor="gold",label="BirthLabel"];
+n21[shape="plaintext",style="filled",fillcolor="gold",label="ULAN_ID"];
+n22[shape="plaintext",style="filled",fillcolor="gold",label="AutryMakerURL"];
+n23[shape="plaintext",style="filled",fillcolor="gold",label="MakerCopy"];
+n24[shape="plaintext",style="filled",fillcolor="gold",label="Nationality"];
+n25[shape="plaintext",style="filled",fillcolor="gold",label="NationalityAAT"];
+n26[shape="plaintext",style="filled",fillcolor="gold",label="AutryMakerURLCopy"];
+n27[shape="plaintext",style="filled",fillcolor="gold",label="MakerID"];
 n28[shape="plaintext",style="filled",fillcolor="gold",label="UlanURI"];
-n29[shape="plaintext",style="filled",fillcolor="gold",label="BirthTimespanURI"];
-n30[shape="plaintext",style="filled",fillcolor="gold",label="BirthLabel"];
-n31[shape="plaintext",style="filled",fillcolor="gold",label="NationalityAAT"];
-n32[shape="plaintext",style="filled",fillcolor="gold",label="BirthURI"];
-n33[shape="plaintext",style="filled",fillcolor="gold",label="ProductionURI"];
-n34[shape="plaintext",style="filled",fillcolor="gold",label="LatestBirthYear"];
-n35[shape="plaintext",style="filled",fillcolor="gold",label="MakerID"];
-n36[shape="plaintext",style="filled",fillcolor="gold",label="Pref_Id_URI"];
-n37[shape="plaintext",style="filled",fillcolor="gold",label="Nationality"];
-n38[shape="plaintext",style="filled",fillcolor="gold",label="Maker"];
-n39[shape="plaintext",style="filled",fillcolor="gold",label="ObjectURI"];
-n40[shape="plaintext",style="filled",fillcolor="gold",label="MakerAppellationURI"];
+n29[shape="plaintext",style="filled",fillcolor="gold",label="MakerAppellationURI"];
+n30[shape="plaintext",style="filled",fillcolor="gold",label="EarliestDeathDate"];
+n31[shape="plaintext",style="filled",fillcolor="gold",label="LatestBirthYear"];
+n32[shape="plaintext",style="filled",fillcolor="gold",label="LatestDeathDate"];
+n33[shape="plaintext",style="filled",fillcolor="gold",label="DeathTimespanURI"];
+n34[shape="plaintext",style="filled",fillcolor="gold",label="ID_Label"];
+n35[shape="plaintext",style="filled",fillcolor="gold",label="Pref_Id_URI"];
+n36[shape="plaintext",style="filled",fillcolor="gold",label="BirthURI"];
+n37[shape="plaintext",style="filled",fillcolor="gold",label="PreferredTermsURI"];
+n38[shape="plaintext",style="filled",fillcolor="gold",label="EarliestBirthYear"];
+n39[shape="plaintext",style="filled",fillcolor="gold",label="NationalityURI"];
+n40[shape="plaintext",style="filled",fillcolor="gold",label="ProductionURI"];
 n41[shape="plaintext",style="filled",fillcolor="gold",label="MakerURI"];
-n42[shape="plaintext",style="filled",fillcolor="gold",label="ULAN_ID"];
-n43[shape="plaintext",style="filled",fillcolor="gold",label="AutryMakerURL"];
+n42[shape="plaintext",style="filled",fillcolor="gold",label="DeathURI"];
+n43[shape="plaintext",style="filled",fillcolor="gold",label="ObjectURI"];
 n44[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/aat/300404670"];
 n45[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/ulan"];
 }
@@ -63,33 +63,33 @@ n11 -> n13[color="brown",fontcolor="black",label="P4_has_time-span"]
 n7 -> n14[color="brown",fontcolor="black",label="P4_has_time-span"]
 n12 -> n15[color="brown",fontcolor="black",label="P2_has_type"]
 n8 -> n16[color="brown",fontcolor="black",label="P2_has_type"]
-n16 -> n17[color="brown",fontcolor="black",label="classLink"]
-n7 -> n18[color="brown",fontcolor="black",label="classLink"]
-n12 -> n19[color="brown",fontcolor="black",label="classLink"]
-n14 -> n20[color="brown",fontcolor="black",label="classLink"]
-n14 -> n21[color="brown",fontcolor="black",label="P82a_begin_of_the_begin"]
-n8 -> n22[color="brown",fontcolor="black",label="value"]
-n13 -> n23[color="brown",fontcolor="black",label="P82a_begin_of_the_begin"]
-n14 -> n24[color="brown",fontcolor="black",label="label"]
-n6 -> n25[color="brown",fontcolor="black",label="label"]
-n14 -> n26[color="brown",fontcolor="black",label="P82b_end_of_the_end"]
-n10 -> n27[color="brown",fontcolor="black",label="label"]
+n13 -> n17[color="brown",fontcolor="black",label="classLink"]
+n14 -> n18[color="brown",fontcolor="black",label="label"]
+n3 -> n19[color="brown",fontcolor="black",label="label"]
+n13 -> n20[color="brown",fontcolor="black",label="label"]
+n9 -> n21[color="brown",fontcolor="black",label="label"]
+n10 -> n22[color="brown",fontcolor="black",label="classLink"]
+n8 -> n23[color="brown",fontcolor="black",label="value"]
+n12 -> n24[color="brown",fontcolor="black",label="label"]
+n15 -> n25[color="brown",fontcolor="black",label="classLink"]
+n10 -> n26[color="brown",fontcolor="black",label="label"]
+n6 -> n27[color="brown",fontcolor="black",label="value"]
 n9 -> n28[color="brown",fontcolor="black",label="classLink"]
-n13 -> n29[color="brown",fontcolor="black",label="classLink"]
-n13 -> n30[color="brown",fontcolor="black",label="label"]
-n15 -> n31[color="brown",fontcolor="black",label="classLink"]
-n11 -> n32[color="brown",fontcolor="black",label="classLink"]
-n2 -> n33[color="brown",fontcolor="black",label="classLink"]
-n13 -> n34[color="brown",fontcolor="black",label="P82b_end_of_the_end"]
-n6 -> n35[color="brown",fontcolor="black",label="value"]
-n6 -> n36[color="brown",fontcolor="black",label="classLink"]
-n12 -> n37[color="brown",fontcolor="black",label="label"]
-n3 -> n38[color="brown",fontcolor="black",label="label"]
-n4 -> n39[color="brown",fontcolor="black",label="classLink"]
-n8 -> n40[color="brown",fontcolor="black",label="classLink"]
+n8 -> n29[color="brown",fontcolor="black",label="classLink"]
+n14 -> n30[color="brown",fontcolor="black",label="P82a_begin_of_the_begin"]
+n13 -> n31[color="brown",fontcolor="black",label="P82b_end_of_the_end"]
+n14 -> n32[color="brown",fontcolor="black",label="P82b_end_of_the_end"]
+n14 -> n33[color="brown",fontcolor="black",label="classLink"]
+n6 -> n34[color="brown",fontcolor="black",label="label"]
+n6 -> n35[color="brown",fontcolor="black",label="classLink"]
+n11 -> n36[color="brown",fontcolor="black",label="classLink"]
+n16 -> n37[color="brown",fontcolor="black",label="classLink"]
+n13 -> n38[color="brown",fontcolor="black",label="P82a_begin_of_the_begin"]
+n12 -> n39[color="brown",fontcolor="black",label="classLink"]
+n2 -> n40[color="brown",fontcolor="black",label="classLink"]
 n3 -> n41[color="brown",fontcolor="black",label="classLink"]
-n9 -> n42[color="brown",fontcolor="black",label="label"]
-n10 -> n43[color="brown",fontcolor="black",label="classLink"]
+n7 -> n42[color="brown",fontcolor="black",label="classLink"]
+n4 -> n43[color="brown",fontcolor="black",label="classLink"]
 n5 -> n7[color="brown",fontcolor="black",label="P93i_was_taken_out_of_existence_by"]
 n6 -> n44[color="brown",fontcolor="black",label="P2_has_type"]
 n3 -> n6[color="brown",fontcolor="black",label="P1_is_identified_by"]
