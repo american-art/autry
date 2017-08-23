@@ -48,7 +48,7 @@ else:
 #### _TitlePreferredTermsURI_
 From column: _TitleURI_
 ``` python
-if getValue("Title"):
+if getValue("Title") or getValue("ObjectName"):
     return "http://vocab.getty.edu/aat/300404670"
 else:
     return ''
@@ -172,7 +172,12 @@ return "http://vocab.getty.edu/aat/300404621"
 #### _TitleCopy_
 From column: _Title_
 ``` python
-return getValue("Title")
+if getValue("Title"):
+    return getValue("Title")
+elif getValue("ObjectName"):
+    return getValue("ObjectName")
+else:
+    return ''
 ```
 
 #### _OwnerURLCopy_
@@ -191,6 +196,17 @@ return getValue("AutryObjectURL")
 From column: _Owner_
 ``` python
 return "http://data.americanartcollaborative.org/autry"
+```
+
+#### _TitleLabel_
+From column: _Title_
+``` python
+if getValue("Title"):
+    return getValue("Title")
+elif getValue("ObjectName"):
+    return getValue("ObjectName")
+else:
+    return ''
 ```
 
 
@@ -223,8 +239,8 @@ return "http://data.americanartcollaborative.org/autry"
 | _PreferredIDURI_ | `uri` | `crm:E42_Identifier1`|
 | _PreferredTermsURI_ | `uri` | `crm:E55_Type1`|
 | _RepositoryTermsURI_ | `uri` | `crm:E55_Type7`|
-| _Title_ | `rdfs:label` | `crm:E22_Man-Made_Object1`|
 | _TitleCopy_ | `rdf:value` | `crm:E35_Title1`|
+| _TitleLabel_ | `rdfs:label` | `crm:E22_Man-Made_Object1`|
 | _TitlePreferredTermsURI_ | `uri` | `crm:E55_Type2`|
 | _TitleURI_ | `uri` | `crm:E35_Title1`|
 | _VisualWorksURI_ | `uri` | `crm:E55_Type6`|
