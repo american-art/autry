@@ -8,18 +8,18 @@ n2[style="filled",color="white",fillcolor="lightgray",label="E22_Man-Made_Object
 n3[style="filled",color="white",fillcolor="lightgray",label="E33_Linguistic_Object1"];
 n4[style="filled",color="white",fillcolor="lightgray",label="E55_Type1"];
 n5[style="filled",color="white",fillcolor="lightgray",label="E55_Type2"];
-n6[shape="plaintext",style="filled",fillcolor="gold",label="DescriptionURI"];
-n7[shape="plaintext",style="filled",fillcolor="gold",label="DescriptionAATURI"];
-n8[shape="plaintext",style="filled",fillcolor="gold",label="ObjectURI"];
-n9[shape="plaintext",style="filled",fillcolor="gold",label="PublicDescriptionCopy"];
-n10[shape="plaintext",style="filled",fillcolor="gold",label="PreferredTermsURI"];
+n6[shape="plaintext",style="filled",fillcolor="gold",label="PreferredTermsURI"];
+n7[shape="plaintext",style="filled",fillcolor="gold",label="ObjectURI"];
+n8[shape="plaintext",style="filled",fillcolor="gold",label="PublicDescriptionCopy"];
+n9[shape="plaintext",style="filled",fillcolor="gold",label="DescriptionURI"];
+n10[shape="plaintext",style="filled",fillcolor="gold",label="DescriptionAATURI"];
 }
 n2 -> n3[color="brown",fontcolor="black",label="P129i_is_subject_of"]
 n3 -> n4[color="brown",fontcolor="black",label="P2_has_type"]
 n3 -> n5[color="brown",fontcolor="black",label="P2_has_type"]
-n3 -> n6[color="brown",fontcolor="black",label="classLink"]
-n4 -> n7[color="brown",fontcolor="black",label="classLink"]
-n2 -> n8[color="brown",fontcolor="black",label="classLink"]
-n3 -> n9[color="brown",fontcolor="black",label="value"]
-n5 -> n10[color="brown",fontcolor="black",label="classLink"]
+n5 -> n6[color="brown",fontcolor="black",label="classLink"]
+n2 -> n7[color="brown",fontcolor="black",label="classLink"]
+n3 -> n8[color="brown",fontcolor="black",label="value"]
+n3 -> n9[color="brown",fontcolor="black",label="classLink"]
+n4 -> n10[color="brown",fontcolor="black",label="classLink"]
 }
