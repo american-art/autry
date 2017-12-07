@@ -195,7 +195,7 @@ return getValue("AutryObjectURL")
 #### _OwnerURI_
 From column: _Owner_
 ``` python
-return "http://data.americanartcollaborative.org/autry"
+return "http://data.theautry.org"
 ```
 
 #### _TitleLabel_
